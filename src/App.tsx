@@ -49,7 +49,12 @@ function AccordionDemo() {
 function App() {
   return (
     <>
-      <h1 className=" text-3xl font-bold underline">Hello world!</h1>
+      <h1 enable-xr className=" text-3xl font-bold underline">
+        Hello world!
+      </h1>
+      <div enable-xr style={{ "--xr-back": 12 }}>
+        spatial div
+      </div>
       <AccordionDemo />
       <CalendarDemo />
     </>
