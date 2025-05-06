@@ -1,62 +1,35 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Calendar } from "@/components/ui/calendar";
-import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import "@/lib/channel-message";
 
-function CalendarDemo() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
+const ClockAppURL = "/src/pages/clock/index.html";
+
+function TimerConfigPanel() {
+  const onCreateTimer = () => {
+    window.open(ClockAppURL);
+  };
 
   return (
-    <Calendar
-      mode="single"
-      selected={date}
-      onSelect={setDate}
-      className="rounded-md border"
-    />
-  );
-}
-
-function AccordionDemo() {
-  return (
-    <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you prefer.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
+    <div>
+      <h1>Timer Config</h1>
+      <Button onClick={onCreateTimer}>Button</Button>
+    </div>
   );
 }
 
 function App() {
   return (
     <>
-      <h1 enable-xr className=" text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <div enable-xr style={{ "--xr-back": 12 }}>
-        spatial div
-      </div>
-      <AccordionDemo />
-      <CalendarDemo />
+      <Tabs defaultValue="timer" className="w-[400px]">
+        <TabsList>
+          <TabsTrigger value="timer">Timer</TabsTrigger>
+          <TabsTrigger value="weather">Weather</TabsTrigger>
+        </TabsList>
+        <TabsContent value="timer">
+          <TimerConfigPanel />
+        </TabsContent>
+        <TabsContent value="password">Change your password here.</TabsContent>
+      </Tabs>
     </>
   );
 }

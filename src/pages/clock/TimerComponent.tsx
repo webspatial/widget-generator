@@ -2,8 +2,13 @@ import React, { JSX } from "react";
 import { Button } from "@/components/ui/button";
 
 import { Card, CardContent } from "./Card";
+import { sendCloseAppMessage } from "@/lib/channel-message";
 
 export const TimerComponent = (): JSX.Element => {
+  const onClearOtherApps = () => {
+    sendCloseAppMessage();
+  };
+
   return (
     <Card className="w-[402px] h-[456px] bg-windowsglass rounded-[46px] overflow-hidden border-none backdrop-blur-[50px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(50px)_brightness(100%)] bg-blend-luminosity shadow-blur">
       <CardContent className="p-0 flex flex-col h-full">
@@ -26,6 +31,7 @@ export const TimerComponent = (): JSX.Element => {
               variant="ghost"
               size="icon"
               className="w-11 h-11 bg-[#ffffff1a] rounded-full p-0"
+              onClick={onClearOtherApps}
             >
               <div className="relative w-[18px] h-4">
                 <img
