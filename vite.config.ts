@@ -6,14 +6,21 @@ import WebSpatial from "@webspatial/vite-plugin";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({ jsxImportSource: "@webspatial/react-sdk" }),
-    tailwindcss(),
-    WebSpatial({ outputDir: "" }) as Plugin[],
-  ],
+  plugins: [react(), tailwindcss(), WebSpatial({ outputDir: "" }) as Plugin[]],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        clock: path.resolve(__dirname, "src/pages/clock/index.html"),
+        weather: path.resolve(__dirname, "src/pages/weather/index.html"),
+        whiteboard: path.resolve(__dirname, "src/pages/whiteboard/index.html"),
+      },
     },
   },
 });
