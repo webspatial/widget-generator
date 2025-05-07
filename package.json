@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "XR_ENV=avp vite",
+    "sim": "npx webspatial-builder run --base=http://localhost:5173/",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
