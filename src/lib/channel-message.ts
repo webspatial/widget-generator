@@ -1,15 +1,20 @@
 const channel = new BroadcastChannel("my_channel");
+var closeChannelMessageCb: () => void;
+
 channel.onmessage = (e) => {
-  console.log("Received:", e.data);
   if (e.data.type === "closeApp") {
-    // @todo: close current scene
+    if (closeChannelMessageCb) closeChannelMessageCb();
   }
 };
 
 export function sendCloseAppMessage() {
-  const content = {
+  const message = {
     type: "closeApp",
     payload: {},
   };
-  channel.postMessage({ content });
+  channel.postMessage(message);
+}
+
+export function onCloseAppMessage(callback: () => void) {
+  closeChannelMessageCb = callback;
 }

@@ -4,17 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "./Card";
 import { sendCloseAppMessage } from "@/lib/channel-message";
 
-export const TimerComponent = (): JSX.Element => {
+export const TimerComponent = (props: {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}): JSX.Element => {
   const onClearOtherApps = () => {
     sendCloseAppMessage();
   };
+
+  const { hours, minutes, seconds } = props;
+
+  const timeDisplay = `${minutes}:${seconds}`;
 
   return (
     <Card className="w-[402px] h-[456px] bg-windowsglass rounded-[46px] overflow-hidden border-none backdrop-blur-[50px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(50px)_brightness(100%)] bg-blend-luminosity shadow-blur">
       <CardContent className="p-0 flex flex-col h-full">
         {/* Header section */}
         <div className="flex w-full h-[92px] items-center justify-between px-6">
-          <div className="font-bold text-textprimary text-[29px]">15:00</div>
+          <div className="font-bold text-textprimary text-[29px]">
+            {timeDisplay}
+          </div>
           <div className="flex items-center gap-4">
             <Button
               variant="ghost"
