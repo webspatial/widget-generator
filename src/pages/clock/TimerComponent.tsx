@@ -15,7 +15,7 @@ export const TimerComponent = (props: {
 
   const { hours, minutes, seconds } = props;
 
-  const timeDisplay = `${minutes}:${seconds}`;
+  const timeDisplay = `${hours}:${minutes}:${seconds}`;
 
   return (
     <Card className="w-[402px] h-[456px] bg-windowsglass rounded-[46px] overflow-hidden border-none backdrop-blur-[50px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(50px)_brightness(100%)] bg-blend-luminosity shadow-blur">
