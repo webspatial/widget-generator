@@ -10,7 +10,16 @@ const hours = parseInt(urlParams.get("hours") ?? "0");
 const minutes = parseInt(urlParams.get("minutes") ?? "0");
 const seconds = parseInt(urlParams.get("seconds") ?? "0");
 
-console.log(hours, minutes, seconds);
+// ignore ts lint error
+(window as any).xrCurrentSceneDefaults = async () => {
+  return {
+    defaultSize: {
+      width: 402,
+      height: 456,
+    },
+    resizability: "contentSize",
+  };
+};
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
