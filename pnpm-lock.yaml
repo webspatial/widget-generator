@@ -22,22 +22,22 @@ importers:
         version: 1.1.11(@types/react-dom@19.1.3(@types/react@19.1.3))(@types/react@19.1.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tailwindcss/vite':
         specifier: ^4.1.5
-        version: 4.1.5(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
+        version: 4.1.5(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
       '@webspatial/builder':
-        specifier: ^0.1.14
-        version: 0.1.14
+        specifier: ^0.1.16
+        version: 0.1.16
       '@webspatial/core-sdk':
-        specifier: ^0.1.14
-        version: 0.1.14
+        specifier: ^0.1.16
+        version: 0.1.16
       '@webspatial/platform-visionos':
-        specifier: ^0.1.14
-        version: 0.1.14
+        specifier: ^0.1.16
+        version: 0.1.16
       '@webspatial/react-sdk':
-        specifier: ^0.1.14
-        version: 0.1.14(@webspatial/core-sdk@0.1.14)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^0.1.16
+        version: 0.1.16(@webspatial/core-sdk@0.1.16)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@webspatial/vite-plugin':
         specifier: ^0.1.7
-        version: 0.1.7(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
+        version: 0.1.7(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -70,14 +70,14 @@ importers:
         version: 0.176.0
       vite-plugin-html:
         specifier: ^3.2.2
-        version: 3.2.2(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
+        version: 3.2.2(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
     devDependencies:
       '@eslint/js':
         specifier: ^9.26.0
         version: 9.26.0
       '@types/node':
-        specifier: ^22.15.14
-        version: 22.15.14
+        specifier: ^22.15.16
+        version: 22.15.16
       '@types/react':
         specifier: ^19.1.3
         version: 19.1.3
@@ -86,7 +86,7 @@ importers:
         version: 19.1.3(@types/react@19.1.3)
       '@vitejs/plugin-react':
         specifier: ^4.4.1
-        version: 4.4.1(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
+        version: 4.4.1(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))
       eslint:
         specifier: ^9.26.0
         version: 9.26.0(jiti@2.4.2)
@@ -97,8 +97,8 @@ importers:
         specifier: ^0.4.20
         version: 0.4.20(eslint@9.26.0(jiti@2.4.2))
       globals:
-        specifier: ^16.0.0
-        version: 16.0.0
+        specifier: ^16.1.0
+        version: 16.1.0
       tw-animate-css:
         specifier: ^1.2.9
         version: 1.2.9
@@ -110,7 +110,7 @@ importers:
         version: 8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.7.3)
       vite:
         specifier: ^6.3.5
-        version: 6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
+        version: 6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
 
 packages:
 
@@ -410,8 +410,8 @@ packages:
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
 
-  '@humanwhocodes/retry@0.4.2':
-    resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
+  '@humanwhocodes/retry@0.4.3':
+    resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
   '@img/sharp-darwin-arm64@0.33.5':
@@ -1204,8 +1204,8 @@ packages:
   '@types/node@16.9.1':
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
 
-  '@types/node@22.15.14':
-    resolution: {integrity: sha512-BL1eyu/XWsFGTtDWOYULQEs4KR0qdtYfCxYAUYRoB7JP7h9ETYLgQTww6kH8Sj2C0pFGgrpM0XKv6/kbIzYJ1g==}
+  '@types/node@22.15.16':
+    resolution: {integrity: sha512-3pr+KjwpVujqWqOKT8mNR+rd09FqhBLwg+5L/4t0cNYBzm/yEiYGCxWttjaPBsLtAo+WFNoXzGJfolM1JuRXoA==}
 
   '@types/react-dom@19.1.3':
     resolution: {integrity: sha512-rJXC08OG0h3W6wDMFxQrZF00Kq6qQvw0djHRdzl3U5DnIERz0MRce3WVc7IS6JYBwtaP/DwYtRRjVlvivNveKg==}
@@ -1286,22 +1286,22 @@ packages:
   '@webgpu/types@0.1.60':
     resolution: {integrity: sha512-8B/tdfRFKdrnejqmvq95ogp8tf52oZ51p3f4QD5m5Paey/qlX4Rhhy5Y8tgFMi7Ms70HzcMMw3EQjH/jdhTwlA==}
 
-  '@webspatial/builder@0.1.14':
-    resolution: {integrity: sha512-hrFxc6rh9h8Usi+xe9b+0oer9JUUMUGVo99zSSMa3pSsM6oDmc1VssDipMK6yGXJdiLLbT/9DWIUEKfCVxIN9w==}
+  '@webspatial/builder@0.1.16':
+    resolution: {integrity: sha512-IcwiYb6G89RG5pT3tCm4qQMBrVTrtJ+O7d8orhl5SCTPWaqOHHRL9Z8Zseqv2cn8E5L3fo52t0gs6exkqIa8Bg==}
     engines: {node: '>=14.15.0'}
     hasBin: true
 
-  '@webspatial/core-sdk@0.1.14':
-    resolution: {integrity: sha512-OVvhjFV0nni+YQ8dZiT7qwrJZQ7MXp4uSE7J17D3OaYETKR1oFBx7RW5VWkKdBCXS2m1M6DDjvdhq0tmtjprVw==}
+  '@webspatial/core-sdk@0.1.16':
+    resolution: {integrity: sha512-4GEBeOFTTSRuQn5Tj8ZP4c0ksA9RJBt5Q/E8Uy4/QMJpnYUk7kexYOcYkumDDI+3ajtiRlAJamqR/fL0Oovr0w==}
 
-  '@webspatial/platform-visionos@0.1.14':
-    resolution: {integrity: sha512-zBURCJqturdMaeD87CB3anbIEz3t2XfBF5yzpexA6GWBv841G7Kbabr9atR/kdGJovO5Yo0l3LDzcE+jpLarEA==}
+  '@webspatial/platform-visionos@0.1.16':
+    resolution: {integrity: sha512-rs+GvdTHysuaxZUI4UzsbpId2EAlzBjt2hi9azl31yxLM7PUjdTmsqjPOLosOryCBU+qADUS/iKUX5PWQbUBmg==}
     engines: {node: '>=14.15.0'}
 
-  '@webspatial/react-sdk@0.1.14':
-    resolution: {integrity: sha512-ysqI+Ob6SkR9b/Z/Aysvd4AukCnw52eJDISOZcG3QAaAlTyCaREicX/1ZqtP/QrviqZeCB40TA3A4vmHQZ+8jg==}
+  '@webspatial/react-sdk@0.1.16':
+    resolution: {integrity: sha512-SiTnPQg70hiZmq+Kfc0KLReNHlaZ7d18Px93mwQ9GoPlycK2Zt3fn9pdrFfow6i67UcQKhXjNW8d6ZvElqtelw==}
     peerDependencies:
-      '@webspatial/core-sdk': 0.1.14
+      '@webspatial/core-sdk': 0.1.16
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
     peerDependenciesMeta:
@@ -1635,8 +1635,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.150:
-    resolution: {integrity: sha512-rOOkP2ZUMx1yL4fCxXQKDHQ8ZXwisb2OycOQVKHgvB3ZI4CvehOd4y2tfnnLDieJ3Zs1RL1Dlp3cMkyIn7nnXA==}
+  electron-to-chromium@1.5.151:
+    resolution: {integrity: sha512-Rl6uugut2l9sLojjS4H4SAr3A4IgACMLgpuEMPYCVcKydzfyPrn5absNRju38IhQOf/NwjJY8OGWjlteqYeBCA==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1909,8 +1909,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@16.0.0:
-    resolution: {integrity: sha512-iInW14XItCXET01CQFqudPOWP2jYMl7T+QRQT+UNcR/iQncN/F0UNpgd76iFkBPgNQb4+X3LV9tLJYzwh+Gl3A==}
+  globals@16.1.0:
+    resolution: {integrity: sha512-aibexHNbb/jiUSObBgpHLj+sIuUmJnYcgXBlrfsiDZ9rt4aF2TFRbyLgZ2iFQuVZ1K5Mx3FVkbKRSgKrbK3K2g==}
     engines: {node: '>=18'}
 
   gopd@1.2.0:
@@ -3173,7 +3173,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.1': {}
 
-  '@humanwhocodes/retry@0.4.2': {}
+  '@humanwhocodes/retry@0.4.3': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -3863,12 +3863,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.5
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.5
 
-  '@tailwindcss/vite@4.1.5(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))':
+  '@tailwindcss/vite@4.1.5(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))':
     dependencies:
       '@tailwindcss/node': 4.1.5
       '@tailwindcss/oxide': 4.1.5
       tailwindcss: 4.1.5
-      vite: 6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
+      vite: 6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
 
   '@tokenizer/token@0.3.0': {}
 
@@ -3901,7 +3901,7 @@ snapshots:
 
   '@types/node@16.9.1': {}
 
-  '@types/node@22.15.14':
+  '@types/node@22.15.16':
     dependencies:
       undici-types: 6.21.0
 
@@ -4007,23 +4007,23 @@ snapshots:
       '@typescript-eslint/types': 8.32.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitejs/plugin-react@4.4.1(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))':
+  '@vitejs/plugin-react@4.4.1(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))':
     dependencies:
       '@babel/core': 7.27.1
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.1)
       '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.27.1)
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
+      vite: 6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
     transitivePeerDependencies:
       - supports-color
 
   '@webgpu/types@0.1.60': {}
 
-  '@webspatial/builder@0.1.14':
+  '@webspatial/builder@0.1.16':
     dependencies:
       '@resvg/resvg-js': 2.6.2
-      '@webspatial/platform-visionos': 0.1.14
+      '@webspatial/platform-visionos': 0.1.16
       cli-progress: 3.12.0
       colors: 1.4.0
       commander: 13.1.0
@@ -4041,17 +4041,17 @@ snapshots:
       - debug
       - encoding
 
-  '@webspatial/core-sdk@0.1.14':
+  '@webspatial/core-sdk@0.1.16':
     dependencies:
       loglevel: 1.9.2
 
-  '@webspatial/platform-visionos@0.1.14': {}
+  '@webspatial/platform-visionos@0.1.16': {}
 
-  '@webspatial/react-sdk@0.1.14(@webspatial/core-sdk@0.1.14)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@webspatial/react-sdk@0.1.16(@webspatial/core-sdk@0.1.16)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@google/model-viewer': 4.1.0(three@0.170.0)
       '@types/three': 0.170.0
-      '@webspatial/core-sdk': 0.1.14
+      '@webspatial/core-sdk': 0.1.16
       lodash.isequal: 4.5.0
       loglevel: 1.9.2
       three: 0.170.0
@@ -4061,10 +4061,10 @@ snapshots:
 
   '@webspatial/shared@0.1.4': {}
 
-  '@webspatial/vite-plugin@0.1.7(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))':
+  '@webspatial/vite-plugin@0.1.7(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0))':
     dependencies:
       '@webspatial/shared': 0.1.4
-      vite: 6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
+      vite: 6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
 
   '@xmldom/xmldom@0.8.10': {}
 
@@ -4164,7 +4164,7 @@ snapshots:
   browserslist@4.24.5:
     dependencies:
       caniuse-lite: 1.0.30001717
-      electron-to-chromium: 1.5.150
+      electron-to-chromium: 1.5.151
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.5)
 
@@ -4366,7 +4366,7 @@ snapshots:
     dependencies:
       jake: 10.9.2
 
-  electron-to-chromium@1.5.150: {}
+  electron-to-chromium@1.5.151: {}
 
   emoji-regex@8.0.0: {}
 
@@ -4452,7 +4452,7 @@ snapshots:
       '@eslint/plugin-kit': 0.2.8
       '@humanfs/node': 0.16.6
       '@humanwhocodes/module-importer': 1.0.1
-      '@humanwhocodes/retry': 0.4.2
+      '@humanwhocodes/retry': 0.4.3
       '@modelcontextprotocol/sdk': 1.11.0
       '@types/estree': 1.0.7
       '@types/json-schema': 7.0.15
@@ -4700,7 +4700,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@16.0.0: {}
+  globals@16.1.0: {}
 
   gopd@1.2.0: {}
 
@@ -5580,7 +5580,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-html@3.2.2(vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)):
+  vite-plugin-html@3.2.2(vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)):
     dependencies:
       '@rollup/pluginutils': 4.2.1
       colorette: 2.0.20
@@ -5594,9 +5594,9 @@ snapshots:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.4.2
       pathe: 0.2.0
-      vite: 6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
+      vite: 6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)
 
-  vite@6.3.5(@types/node@22.15.14)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0):
+  vite@6.3.5(@types/node@22.15.16)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0):
     dependencies:
       esbuild: 0.25.4
       fdir: 6.4.4(picomatch@4.0.2)
@@ -5605,7 +5605,7 @@ snapshots:
       rollup: 4.40.2
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.15.14
+      '@types/node': 22.15.16
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.29.2
