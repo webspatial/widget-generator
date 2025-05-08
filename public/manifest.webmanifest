@@ -3,8 +3,8 @@
   "start_url": "/",
   "xr_main_scene": {
     "default_size": {
-      "width": 620,
-      "height": 600
+      "width": 402,
+      "height": 540
     }
   },
   "display": "minimal-ui",
