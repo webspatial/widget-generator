@@ -1,29 +1,37 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { gAppManager, AppType } from "./app-manager";
 
 // Checkbox component for template selection
 const TemplateCheckbox = ({ isSelected }: { isSelected: boolean }) => (
-  <div className={`rounded-full p-2 ${isSelected ? "bg-blue-500" : "bg-gray-400"}`}>
+  <div
+    className={`rounded-full p-2 ${isSelected ? "bg-blue-500" : "bg-gray-400"}`}
+  >
     {isSelected && <Check className="h-5 w-5 text-white" />}
     {!isSelected && <div className="h-5 w-5" />}
   </div>
-)
+);
 
 export default function WhiteBoard() {
-  const [selectedTemplate, setSelectedTemplate] = useState<"light" | "dark">("light")
+  const [selectedTemplate, setSelectedTemplate] = useState<"light" | "dark">(
+    "light"
+  );
 
   const handleCreate = () => {
-    console.log("Create button clicked! Selected template:", selectedTemplate)
-  }
+    console.log("Create button clicked! Selected template:", selectedTemplate);
+    gAppManager.createApp(AppType.Clock, { selectedTemplate });
+  };
 
   return (
     <div className="flex flex-col h-full">
-      <h1 className="text-[36px] font-bold text-white mb-6">White Board</h1>
+      <h1 className="text-[36px] h-[54px] font-bold text-white mb-6">
+        White Board
+      </h1>
 
-      <div className="flex-1 rounded-[20px] mb-8 overflow-hidden">
+      <div className="flex-1 h-[298px] rounded-[20px] mb-8 overflow-hidden">
         {/* Template Preview */}
         <div className="w-full h-full rounded-[20px] overflow-hidden flex flex-col">
           {/* Light Template */}
@@ -32,7 +40,12 @@ export default function WhiteBoard() {
             onClick={() => setSelectedTemplate("light")}
           >
             {/* Curved Line with Loop SVG - Black version */}
-            <svg width="240" height="60" viewBox="0 0 240 60" className="pointer-events-none">
+            <svg
+              width="240"
+              height="60"
+              viewBox="0 0 240 60"
+              className="pointer-events-none"
+            >
               <path
                 d="M40,30 C70,10 90,50 120,30 C150,10 170,50 200,30"
                 fill="none"
@@ -53,7 +66,12 @@ export default function WhiteBoard() {
             onClick={() => setSelectedTemplate("dark")}
           >
             {/* Curved Line with Loop SVG - White version */}
-            <svg width="240" height="60" viewBox="0 0 240 60" className="pointer-events-none">
+            <svg
+              width="240"
+              height="60"
+              viewBox="0 0 240 60"
+              className="pointer-events-none"
+            >
               <path
                 d="M40,30 C70,10 90,50 120,30 C150,10 170,50 200,30"
                 fill="none"
@@ -79,5 +97,5 @@ export default function WhiteBoard() {
         </Button>
       </div>
     </div>
-  )
+  );
 }
