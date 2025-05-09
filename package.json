@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "XR_ENV=avp vite",
     "sim": "npx webspatial-builder run --base=http://localhost:5173/  --bundle-id=com.webspatial.widgetgenerator",
-    "build": "tsc -b && vite build",
+    "build": "XR_ENV=avp tsc -b && XR_ENV=avp vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
