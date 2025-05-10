@@ -128,10 +128,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
 
     // Calculate elapsed percentage
     const elapsedPercentage = 100 - progress;
-
-    // Calculate the portion that should be hidden based on elapsed time
-    // Use negative value to make it decrease in clockwise direction
-    return -circumference * (elapsedPercentage / 100);
+    return circumference * (elapsedPercentage / 100);
   };
 
   // Render control buttons based on current state
@@ -231,7 +228,13 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
           </svg>
 
           {/* Progress circle */}
-          <svg className="absolute w-[190px] h-[190px]" viewBox="0 0 100 100">
+          <svg
+            className="absolute w-[190px] h-[190px]"
+            viewBox="0 0 100 100"
+            style={{
+              transform: "rotateX(180deg) rotateZ(90deg)",
+            }}
+          >
             <circle
               cx="50"
               cy="50"
@@ -242,7 +245,6 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
               strokeLinecap="round"
               strokeDasharray="289.03"
               strokeDashoffset={getProgressOffset()}
-              transform="rotate(-90 50 50)"
             />
           </svg>
 
