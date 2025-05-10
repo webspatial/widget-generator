@@ -6,29 +6,17 @@ import { Plus } from "lucide-react";
 // Define state machine states
 type TimerState = "idle" | "playing" | "paused" | "finished";
 
-// Define component props
+// Component props interface
 interface TimerAppProps {
   initialSeconds?: number;
-  autoStart?: boolean;
 }
 
-export default function TimerApp({
-  initialSeconds = 60,
-  autoStart = true,
-}: TimerAppProps) {
+export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
   // State management
-  const [totalSeconds, setTotalSeconds] = useState(initialSeconds);
-  const [remainingSeconds, setRemainingSeconds] = useState(initialSeconds);
-  const [timerState, setTimerState] = useState<TimerState>(
-    autoStart ? "playing" : "idle"
-  );
+  const [totalSeconds, setTotalSeconds] = useState(initialSeconds); // Initialize with props
+  const [remainingSeconds, setRemainingSeconds] = useState(initialSeconds); // Initialize with props
+  const [timerState, setTimerState] = useState<TimerState>("playing"); // Initial state is playing
   const [isMuted, setIsMuted] = useState(false);
-
-  // Update state when initialSeconds changes
-  useEffect(() => {
-    setTotalSeconds(initialSeconds);
-    setRemainingSeconds(initialSeconds);
-  }, [initialSeconds]);
 
   // Calculate progress percentage
   const progress = (remainingSeconds / totalSeconds) * 100;
@@ -43,12 +31,12 @@ export default function TimerApp({
     const secs = seconds % 60;
 
     if (hours > 0) {
-      // 超过1小时，显示为 HH:MM:SS
+      // For more than 1 hour, display as HH:MM:SS
       return `${hours}:${mins.toString().padStart(2, "0")}:${secs
         .toString()
         .padStart(2, "0")}`;
     } else {
-      // 少于1小时，显示为 MM:SS
+      // For less than 1 hour, display as MM:SS
       return `${mins.toString().padStart(2, "0")}:${secs
         .toString()
         .padStart(2, "0")}`;
@@ -68,7 +56,7 @@ export default function TimerApp({
               audioRef.current.play();
             }
             clearInterval(interval!);
-            setTimerState("finished"); // 转换到finished状态
+            setTimerState("finished"); // Transition to finished state
             return 0;
           }
           return prev - 1;
@@ -80,6 +68,12 @@ export default function TimerApp({
       if (interval) clearInterval(interval);
     };
   }, [timerState, remainingSeconds, isMuted]);
+
+  // Handle initialSeconds changes
+  useEffect(() => {
+    setTotalSeconds(initialSeconds);
+    setRemainingSeconds(initialSeconds);
+  }, [initialSeconds]);
 
   // State transition handler
   const handleStateTransition = (action: string) => {
@@ -124,7 +118,7 @@ export default function TimerApp({
     return timerState === "finished" ? "#ff3838" : "#66e616";
   };
 
-  // Get progress bar offset based on current state
+  // Get progress bar offset based on current state - corrected logic
   const getProgressOffset = () => {
     // Circle circumference is 2πr = 2 * π * 46 ≈ 289.03
     const circumference = 289.03;
@@ -147,9 +141,9 @@ export default function TimerApp({
         return (
           <button
             onClick={() => handleStateTransition("play")}
-            className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-[64px] h-[64px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
           >
-            <PlayIcon className="w-5 h-5 text-white" />
+            <PlayIcon className="w-8 h-8 text-white" />
           </button>
         );
       case "playing":
@@ -157,15 +151,15 @@ export default function TimerApp({
           <>
             <button
               onClick={() => handleStateTransition("reset")}
-              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
+              className="w-[64px] h-[64px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
             >
-              <XIcon className="w-5 h-5 text-white" />
+              <XIcon className="w-8 h-8 text-white" />
             </button>
             <button
               onClick={() => handleStateTransition("pause")}
-              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
+              className="w-[64px] h-[64px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
             >
-              <PauseIcon className="w-5 h-5 text-white" />
+              <PauseIcon className="w-8 h-8 text-white" />
             </button>
           </>
         );
@@ -174,15 +168,15 @@ export default function TimerApp({
           <>
             <button
               onClick={() => handleStateTransition("reset")}
-              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
+              className="w-[64px] h-[64px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
             >
-              <XIcon className="w-5 h-5 text-white" />
+              <XIcon className="w-8 h-8 text-white" />
             </button>
             <button
               onClick={() => handleStateTransition("play")}
-              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
+              className="w-[64px] h-[64px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
             >
-              <PlayIcon className="w-5 h-5 text-white" />
+              <PlayIcon className="w-8 h-8 text-white" />
             </button>
           </>
         );
@@ -190,9 +184,9 @@ export default function TimerApp({
         return (
           <button
             onClick={() => handleStateTransition("stop")}
-            className="w-16 h-16 rounded-full bg-[#ff3838] flex items-center justify-center"
+            className="w-[64px] h-[64px] rounded-full bg-[#e95050] hover:bg-[#e95050] active:bg-[#cf3434] transition-colors flex items-center justify-center focus:outline-none"
           >
-            <StopIcon className="w-5 h-5 text-white" />
+            <StopIcon className="w-8 h-8 text-white" />
           </button>
         );
     }
@@ -205,22 +199,25 @@ export default function TimerApp({
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen w-[402px] h-[456px]">
-      <div className="relative w-full max-w-md aspect-square p-6 flex flex-col">
+    <div className="flex items-center justify-center min-h-screen bg-white">
+      <div className="relative w-[402px] h-[456px] rounded-[40px] bg-[#d9d9d9] p-6 flex flex-col">
         {/* Top bar - total time and add button */}
-        <div className="flex justify-between items-center">
-          <div className="text-4xl font-bold text-white">
+        <div className="flex justify-between items-center mb-4">
+          <div className="font-bold text-white" style={{ fontSize: "29px" }}>
             {formatTime(totalSeconds)}
           </div>
-          <button className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+          <button className="w-[44px] h-[44px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none">
             <Plus className="w-6 h-6 text-white" />
           </button>
         </div>
 
-        {/* Timer circle */}
-        <div className="flex-1 flex items-center justify-center relative">
+        {/* Timer circle container with specific top margin */}
+        <div
+          className="flex-1 relative flex items-start justify-center"
+          style={{ marginTop: "10px" }}
+        >
           {/* Background circle */}
-          <svg className="absolute w-[90%] h-[90%]" viewBox="0 0 100 100">
+          <svg className="absolute w-[190px] h-[190px]" viewBox="0 0 100 100">
             <circle
               cx="50"
               cy="50"
@@ -228,20 +225,20 @@ export default function TimerApp({
               fill="none"
               stroke="#444444"
               strokeOpacity="0.2"
-              strokeWidth="4.5"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </svg>
 
           {/* Progress circle */}
-          <svg className="absolute w-[90%] h-[90%]" viewBox="0 0 100 100">
+          <svg className="absolute w-[190px] h-[190px]" viewBox="0 0 100 100">
             <circle
               cx="50"
               cy="50"
               r="46"
               fill="none"
               stroke={getProgressColor()}
-              strokeWidth="4.5"
+              strokeWidth="3"
               strokeLinecap="round"
               strokeDasharray="289.03"
               strokeDashoffset={getProgressOffset()}
@@ -250,34 +247,38 @@ export default function TimerApp({
           </svg>
 
           {/* Center time display */}
-          <div className="flex flex-col items-center z-10 max-w-[50%]">
+          <div className="absolute flex flex-col items-center justify-start w-[190px] h-[190px]">
             <div
-              className="text-white mb-6 font-bold tabular-nums text-center scale-90"
+              className="text-white font-bold tabular-nums text-center"
               style={{
-                fontSize:
-                  remainingSeconds >= 3600
-                    ? "clamp(1.2rem, 4vw, 2.2rem)"
-                    : "clamp(1.5rem, 5vw, 2.5rem)",
-                lineHeight: 0.9,
+                fontSize: "36px",
+                lineHeight: 1,
                 letterSpacing: "0.01em",
-                maxWidth: "100%",
-                wordBreak: "keep-all",
-                whiteSpace: "nowrap",
+                marginTop: "61px",
               }}
             >
               {getDisplayTime()}
             </div>
-            <button
-              onClick={toggleMute}
-              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
+            <div
+              className="absolute"
+              style={{
+                bottom: "30px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
             >
-              <VolumeIcon className="w-5 h-5 text-white" muted={isMuted} />
-            </button>
+              <button
+                onClick={toggleMute}
+                className="w-[32px] h-[32px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
+              >
+                <VolumeIcon className="w-6 h-6 text-white" muted={isMuted} />
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Control buttons */}
-        <div className="flex justify-center gap-8 mt-4">
+        <div className="flex justify-center gap-8 mt-60 mb-2">
           {renderControlButtons()}
         </div>
       </div>
@@ -312,7 +313,10 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
-// Custom volume icon component
+// 修改VolumeIcon组件以匹配设计稿中的图标样式
+
+// 替换当前的VolumeIcon组件定义为以下内容:
+
 function VolumeIcon({
   className,
   muted,
@@ -323,33 +327,17 @@ function VolumeIcon({
   if (muted) {
     return (
       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={className}
       >
         <path
-          d="M11 5L6 9H2V15H6L11 19V5Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M23 9L17 15"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M17 9L23 15"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4.80138 6.6141L8.49595 3.44433C8.84618 3.14385 9.0213 2.9936 9.16958 2.98988C9.29844 2.98664 9.42154 3.04322 9.50299 3.14313C9.59671 3.25809 9.59671 3.48883 9.59671 3.9503V15.9355C9.59671 16.4274 9.59671 16.6733 9.49862 16.7897C9.41348 16.8907 9.28547 16.9453 9.15363 16.937C9.00175 16.9273 8.82414 16.7572 8.46893 16.417L8.46891 16.417L4.75718 12.862L3.00008 12.862H3.00007H3.00007C2.53337 12.862 2.30001 12.8619 2.12176 12.7711C1.96495 12.6912 1.83747 12.5637 1.75758 12.4069C1.66675 12.2287 1.66675 11.9953 1.66675 11.5286V7.94744C1.66675 7.48073 1.66675 7.24737 1.75758 7.06911C1.83747 6.91231 1.96495 6.78483 2.12176 6.70493C2.30002 6.6141 2.53337 6.6141 3.00008 6.6141H4.80138ZM12.5587 8.11272L13.5015 7.16991L15.387 9.05547L17.2726 7.16991L18.2154 8.11272L16.3299 9.99828L18.2155 11.884L17.2727 12.8268L15.387 10.9411L13.5014 12.8268L12.5586 11.884L14.4442 9.99828L12.5587 8.11272Z"
+          fill="white"
         />
       </svg>
     );
@@ -357,26 +345,17 @@ function VolumeIcon({
 
   return (
     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
     >
       <path
-        d="M11 5L6 9H2V15H6L11 19V5Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M15.54 8.46C16.4774 9.39764 17.0039 10.6692 17.0039 11.995C17.0039 13.3208 16.4774 14.5924 15.54 15.53"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M4.80138 6.6141L8.49595 3.44433L8.49595 3.44433C8.84619 3.14385 9.0213 2.9936 9.16958 2.98988C9.29844 2.98664 9.42154 3.04322 9.50299 3.14313C9.59671 3.25809 9.59671 3.48883 9.59671 3.9503V15.9355C9.59671 16.4274 9.59671 16.6733 9.49862 16.7897C9.41348 16.8907 9.28547 16.9453 9.15363 16.937C9.00175 16.9273 8.82414 16.7572 8.46893 16.417L8.46891 16.417L4.75718 12.862L3.00008 12.862C2.53337 12.862 2.30002 12.862 2.12176 12.7711C1.96495 12.6912 1.83747 12.5637 1.75758 12.4069C1.66675 12.2287 1.66675 11.9953 1.66675 11.5286V7.94744C1.66675 7.48073 1.66675 7.24737 1.75758 7.06911C1.83747 6.91231 1.96495 6.78482 2.12176 6.70493C2.30001 6.6141 2.53337 6.6141 3.00008 6.6141H3.00008H4.80138ZM11.9672 7.33639L12.2921 7.87034C12.6568 8.4698 12.8667 9.17397 12.8667 9.92526C12.8667 10.6571 12.6675 11.3443 12.32 11.9335L12.0026 12.4719L10.9258 11.8369L11.2433 11.2986C11.4805 10.8964 11.6167 10.4277 11.6167 9.92526C11.6167 9.40955 11.4732 8.92927 11.2242 8.52004L10.8993 7.98609L11.9672 7.33639ZM14.1918 5.87661L13.838 5.36141L12.8076 6.06904L13.1614 6.58425C13.8285 7.55564 14.2188 8.73126 14.2188 9.99993C14.2188 11.2082 13.8648 12.3319 13.255 13.2752L12.9157 13.8L13.9654 14.4787L14.3047 13.9538C15.0413 12.8144 15.4688 11.4562 15.4688 9.99993C15.4688 8.47066 14.9974 7.04962 14.1918 5.87661Z"
+        fill="white"
       />
     </svg>
   );
