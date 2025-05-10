@@ -147,7 +147,7 @@ export default function TimerApp({
         return (
           <button
             onClick={() => handleStateTransition("play")}
-            className="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center"
+            className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
           >
             <PlayIcon className="w-5 h-5 text-white" />
           </button>
@@ -157,13 +157,13 @@ export default function TimerApp({
           <>
             <button
               onClick={() => handleStateTransition("reset")}
-              className="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center"
+              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
             >
               <XIcon className="w-5 h-5 text-white" />
             </button>
             <button
               onClick={() => handleStateTransition("pause")}
-              className="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center"
+              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
             >
               <PauseIcon className="w-5 h-5 text-white" />
             </button>
@@ -174,13 +174,13 @@ export default function TimerApp({
           <>
             <button
               onClick={() => handleStateTransition("reset")}
-              className="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center"
+              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
             >
               <XIcon className="w-5 h-5 text-white" />
             </button>
             <button
               onClick={() => handleStateTransition("play")}
-              className="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center"
+              className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center"
             >
               <PlayIcon className="w-5 h-5 text-white" />
             </button>
@@ -269,7 +269,7 @@ export default function TimerApp({
             </div>
             <button
               onClick={toggleMute}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"
+              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
             >
               <VolumeIcon className="w-5 h-5 text-white" muted={isMuted} />
             </button>
