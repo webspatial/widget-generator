@@ -313,10 +313,7 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
-// 修改VolumeIcon组件以匹配设计稿中的图标样式
-
-// 替换当前的VolumeIcon组件定义为以下内容:
-
+// Custom volume icon component
 function VolumeIcon({
   className,
   muted,
