@@ -21,8 +21,7 @@ export default function WhiteBoard() {
   );
 
   const handleCreate = () => {
-    console.log("Create button clicked! Selected template:", selectedTemplate);
-    gAppManager.createApp(AppType.Clock, { selectedTemplate });
+    gAppManager.createApp(AppType.Whiteboard, { selectedTemplate });
   };
 
   return (
