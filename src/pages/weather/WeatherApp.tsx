@@ -309,17 +309,17 @@ export default function WeatherWidget({
   }
 
   return (
-    <div className="w-full max-w-md overflow-hidden rounded-3xl bg-[#3c3c3c] text-white shadow-xl">
+    <div className="w-[456px] h-[438px] max-w-md overflow-hidden rounded-3xl bg-[#3c3c3c] text-white shadow-xl">
       <div className="p-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-4xl font-bold">{weatherData?.name || city}</h1>
-          <button className="flex h-12 w-12 items-center justify-center rounded-full bg-[#5e5e5e] text-white transition hover:bg-[#6e6e6e]">
-            <Plus className="h-6 w-6" />
+          <h1 className="text-[29px] font-bold">{weatherData?.name || city}</h1>
+          <button className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#5e5e5e] text-white transition hover:bg-[#6e6e6e]">
+            <Plus className="h-[24px] w-[24px]" />
           </button>
         </div>
 
-        <div className="mt-6">
-          <p className="text-[29px]">
+        <div className="mt-[28.5px] w-[392px] h-[166px]">
+          <p className="text-[17px]">
             {forecastData[activeDay]?.name || "Today"}
           </p>
           <div className="flex items-center justify-between">
@@ -342,7 +342,7 @@ export default function WeatherWidget({
             <div className="relative h-[166px] w-[250px]">
               {forecastData[activeDay]?.fullWeather === "partly_cloudy" && (
                 <img
-                  src="/partly-cloudy-icon.png"
+                  src="./sunny.jpeg"
                   alt="Partly cloudy"
                   width={250}
                   height={166}
@@ -351,7 +351,7 @@ export default function WeatherWidget({
               )}
               {forecastData[activeDay]?.fullWeather === "sunny" && (
                 <img
-                  src="/bright-yellow-sun-weather-icon.png"
+                  src="./sunny.jpeg"
                   alt="Sunny"
                   width={250}
                   height={166}
@@ -360,7 +360,7 @@ export default function WeatherWidget({
               )}
               {forecastData[activeDay]?.fullWeather === "rainy" && (
                 <img
-                  src="/rain-cloud-icon.png"
+                  src="./sunny.jpeg"
                   alt="Rainy"
                   width={250}
                   height={166}
@@ -369,7 +369,7 @@ export default function WeatherWidget({
               )}
               {forecastData[activeDay]?.fullWeather === "cloudy" && (
                 <img
-                  src="/fluffy-gray-cloud-icon.png"
+                  src="./sunny.jpeg"
                   alt="Cloudy"
                   width={250}
                   height={166}

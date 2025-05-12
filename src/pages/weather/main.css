@@ -1,5 +1,8 @@
 #root {
   background-color: rgba(128, 128, 128, 0.3);
+
+  width: 456px;
+  height: 438px;
 }
 
 html.webspatial {
