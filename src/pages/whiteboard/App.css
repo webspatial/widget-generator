@@ -1,0 +1,17 @@
+.whiteboard{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #8080804D;
+    padding: 24px 24px 28px 28px;
+}
+
+.board-container{
+    position: absolute;
+    top:0;
+    left:0;
+}
