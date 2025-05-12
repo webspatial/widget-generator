@@ -1,3 +1,4 @@
+import { WhiteboardConfig } from '@/pages/whiteboard/utils/config';
 import { Application, Graphics, Container } from 'pixi.js';
 class PainManager {
     private app?: Application;
@@ -10,6 +11,7 @@ class PainManager {
     private backgroundColor: string = '0xffffff';
     private drawType: string = 'draw'; // draw, erase
     public onDraw: () => void = () => {};
+    private cursor: Graphics = undefined;
     
     async init(background:string, parent: HTMLElement) {
         this.app = new Application()
@@ -41,9 +43,10 @@ class PainManager {
         this.isDrawing = true;
         this.bufferCommand = [];
         const graphics = new Graphics();
+        const lineColor = this.drawType === 'erase' ? this.backgroundColor : this.lineColor
         graphics.setStrokeStyle({
-            width: this.drawType === 'erase'? 50 : this.lineWidth,
-            color: this.drawType === 'erase' ? this.backgroundColor : this.lineColor,
+            width: this.lineWidth,
+            color: lineColor,
             cap: 'round',
             join: 'round'
         })
@@ -53,6 +56,21 @@ class PainManager {
             data: [graphics]
         });
         graphics.moveTo(event.globalX, event.globalY);
+        if(this.cursor){
+            this.app?.stage.removeChild(this.cursor);
+        }
+        this.cursor = new Graphics();
+        this.cursor.setStrokeStyle({
+            width: this.lineWidth / 4,
+            color: WhiteboardConfig[WhiteboardConfig.mode].cursor,
+            cap: 'round',
+            join: 'round'
+        })
+        this.cursor.circle(0,0,this.lineWidth / 2);
+        this.cursor.fill({color:lineColor});
+        this.cursor.stroke();
+        this.cursor.position.set(event.globalX, event.globalY);
+        this.app?.stage.addChild(this.cursor);
     }
     
     private draw(event) {
@@ -60,11 +78,16 @@ class PainManager {
         const graphics = this.historyCommand[this.historyCommand.length-1].data[0] as Graphics;
         graphics.lineTo(event.globalX, event.globalY);
         graphics.stroke();
+        this.cursor?.position.set(event.globalX, event.globalY);
     }
     
     private endDrawing() {
         this.isDrawing = false;
         this.onDraw();
+        if(this.cursor){
+            this.app?.stage.removeChild(this.cursor);
+            this.cursor = undefined;
+        }
     }
 
     public clear() {

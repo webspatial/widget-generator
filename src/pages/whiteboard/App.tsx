@@ -4,6 +4,7 @@ import { painManager } from "@/lib/whiteboard/PainManager";
 import ColorSelect from "./component/style-tool/color-select";
 import { ColorProps, LineWidthProps } from "./types";
 import EditTool from "./component/editTool";
+import { WhiteboardConfig } from "./utils/config";
 
 export default function App() {
     const [colors, setColors] = useState<ColorProps[]>([])
@@ -17,8 +18,9 @@ export default function App() {
 
     useEffect(() => {
         if(canvasEl.current){
+            WhiteboardConfig.mode = new URLSearchParams(window.location.search).get('backgroundColor') === 'E9E9E9'? 'light' : 'dark'
             // #1A1A1A, #E9E9E9
-            const backgroundColor = '#' + (new URLSearchParams(window.location.search).get('backgroundColor') ?? 'E9E9E9')
+            const backgroundColor = WhiteboardConfig[WhiteboardConfig.mode].background
             painManager.init(backgroundColor, canvasEl.current);
 
             const useColors:ColorProps[] = [
@@ -26,13 +28,13 @@ export default function App() {
                 {color: '#DAB447', isSelected: false},
                 {color: '#457ACA', isSelected: false},
                 {color: '#349B5D', isSelected: false},
-                {color: '#1E1E1E', isSelected: false},
+                {color: backgroundColor === '#E9E9E9' ? '#1A1A1A' : '#E9E9E9', isSelected: false},
             ]
 
             const useWidths:LineWidthProps[] = [
-                {width: 1, isSelected: true},
-                {width: 2, isSelected: false},
-                {width: 3, isSelected: false},
+                {width: WhiteboardConfig.lineWidths[0], isSelected: true},
+                {width: WhiteboardConfig.lineWidths[1], isSelected: false},
+                {width: WhiteboardConfig.lineWidths[2], isSelected: false},
             ]
             setWidths(useWidths)
             setColors(useColors)

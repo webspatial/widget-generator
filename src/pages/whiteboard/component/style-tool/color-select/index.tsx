@@ -25,7 +25,6 @@ export default function ColorSelect(props:ColorSelectProps){
     const onSelectLineWidth = (e:any) => {
         e.preventDefault()
         e.stopPropagation()
-        console.log(e)
         const selIndex = Number(e.target.id.split('-')[1])
         const newLineWidths = lineWidths.map((item, index) => {
             if(index === selIndex){
@@ -35,7 +34,6 @@ export default function ColorSelect(props:ColorSelectProps){
             }
             return item
         })
-        console.log(newLineWidths)
         setLineWidths(newLineWidths)
     }
 
@@ -49,7 +47,7 @@ export default function ColorSelect(props:ColorSelectProps){
         if(lineWidths.length > 0){
             const selWidth = lineWidths.find(item => item.isSelected)
             if(selWidth){
-                painManager.changeLineWidth(selWidth.width * 5)
+                painManager.changeLineWidth(selWidth.width)
             }
         }
     }, [colors, lineWidths])
@@ -78,7 +76,7 @@ export default function ColorSelect(props:ColorSelectProps){
                 lineWidths.map((item, index) => {
                     return <div className='line-width-item' key={index}>
                         <div id={`width-${index}`} className={"line-width-item-bg" + (item.isSelected ? " line-width-selected" : '')} onClick={onSelectLineWidth}>
-                            <img className='line-width-img' src={`assets/pages/whiteboard/style/line-width${item.width}.png`} />
+                            <img className='line-width-img' src={`assets/pages/whiteboard/style/line-width${index+1}.png`} />
                         </div>
                     </div>
                 })
