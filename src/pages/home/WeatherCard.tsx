@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { WeatherData } from "./weather-type";
+import { gAppManager, AppType } from "./app-manager";
 
 interface WeatherCardProps {
   city: string;
@@ -42,8 +43,15 @@ export default function WeatherCard({
     return <Cloud className="h-6 w-6 text-white opacity-70" />;
   };
 
+  const onGotoWeatherApp = () => {
+    console.log("goto weather app", city);
+    gAppManager.createApp(AppType.Weather, { city });
+  };
   return (
-    <div className="flex items-center justify-between bg-[#a0a0a0] rounded-[16px] py-5 px-6">
+    <div
+      onClick={onGotoWeatherApp}
+      className="flex items-center justify-between bg-[#a0a0a0] rounded-[16px] py-5 px-6"
+    >
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <span className="text-white text-2xl">{city}</span>
