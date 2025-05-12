@@ -1,0 +1,77 @@
+.color-select-container{
+    position: absolute;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+.color-select{
+    width:414px;
+    height:56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top:10px;
+    background-color: #8080804D;
+    border-radius: 100px;
+    gap:6px;
+}
+
+.color-item{
+    width:44px;
+    height:44px;
+    padding: 12px;
+}
+
+.color-item-bg{
+    pointer-events: none;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+}
+
+.color-selected{
+    pointer-events: none;
+    user-select: none;
+}
+
+.line-width-item{
+    width:44px;
+    height:44px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.line-width-item-bg:hover{
+    background-color: #FFFFFF1A;
+}
+
+.line-width-item-bg{
+    width:34px;
+    height:34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-width-selected{
+    background-color: #FFFFFF1A;
+}
+
+.line-width-img{
+    pointer-events: none;
+    user-select: none;
+    width:24px;
+    height:24px;
+}
+
+.color-select-divider{
+    width:2px;
+    height:24px;
+    background-color: #FFFFFF14;
+}
