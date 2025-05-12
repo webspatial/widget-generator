@@ -4,6 +4,7 @@ import type React from "react";
 
 import { Plus, Cloud, CloudRain, Sun, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { gAppManager, AppType } from "../home/app-manager";
 
 // Types for OpenWeatherMap API responses
 interface WeatherData {
@@ -266,12 +267,16 @@ export default function WeatherWidget({
 
   if (loading && !weatherData) {
     return (
-      <div className="flex h-96 w-full max-w-md items-center justify-center rounded-3xl bg-[#3c3c3c] text-white">
+      <div className="flex h-96 w-full max-w-md items-center justify-center  text-white">
         <Loader2 className="h-12 w-12 animate-spin text-white" />
         <span className="ml-2">Loading weather data...</span>
       </div>
     );
   }
+
+  const jumpToHome = () => {
+    gAppManager.createApp(AppType.Home, { from: AppType.Weather });
+  };
 
   const renderWhetherDetail = () => {
     if (forecastData[activeDay]?.isToday) {
@@ -368,7 +373,10 @@ export default function WeatherWidget({
     <div className="w-full h-full text-white pl-[24px] pr-[24px] ">
       <div className="flex items-center h-[92px] justify-between">
         <h1 className="text-[29px] font-bold">{weatherData?.name || city}</h1>
-        <button className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#5e5e5e] text-white transition hover:bg-[#6e6e6e]">
+        <button
+          onClick={jumpToHome}
+          className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#5e5e5e] text-white transition hover:bg-[#6e6e6e]"
+        >
           <Plus className="h-[24px] w-[24px]" />
         </button>
       </div>

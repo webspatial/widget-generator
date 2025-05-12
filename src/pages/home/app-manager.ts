@@ -4,12 +4,14 @@ export enum AppType {
   Clock = "clock",
   Weather = "weather",
   Whiteboard = "whiteboard",
+  Home = "home",
 }
 
 const AppURL = {
   [AppType.Clock]: "/src/pages/clock/index.html",
   [AppType.Weather]: "/src/pages/weather/index.html",
   [AppType.Whiteboard]: "/src/pages/whiteboard/index.html",
+  [AppType.Home]: "/index.html",
 };
 
 class AppManager {

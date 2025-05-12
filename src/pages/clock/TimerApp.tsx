@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Plus } from "lucide-react";
+import { AppType, gAppManager } from "../home/app-manager";
 
 // Define state machine states
 type TimerState = "idle" | "playing" | "paused" | "finished";
@@ -195,6 +196,10 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
     return formatTime(remainingSeconds);
   };
 
+  const jumpToHome = () => {
+    gAppManager.createApp(AppType.Home, { from: AppType.Clock });
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="relative w-[402px] h-[456px] rounded-[40px] bg-[#d9d9d9] p-6 flex flex-col">
@@ -203,7 +208,10 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
           <div className="font-bold text-white" style={{ fontSize: "29px" }}>
             {formatTime(totalSeconds)}
           </div>
-          <button className="w-[44px] h-[44px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none">
+          <button
+            onClick={jumpToHome}
+            className="w-[44px] h-[44px] rounded-full bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors flex items-center justify-center focus:outline-none"
+          >
             <Plus className="w-6 h-6 text-white" />
           </button>
         </div>
