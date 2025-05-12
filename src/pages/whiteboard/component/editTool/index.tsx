@@ -29,7 +29,6 @@ export default function EditTool() {
     }
 
     const onErase = () => {
-        console.log('erase')
         painManager.changeDrawType('erase')
         setCanDraw(false)
     }
