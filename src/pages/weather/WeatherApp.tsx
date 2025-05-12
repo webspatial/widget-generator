@@ -375,7 +375,7 @@ export default function WeatherWidget({
 
       <div className="w-[392px] h-[166px]">{renderWhetherDetail()}</div>
 
-      <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] mt-[24px]">
+      <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] mt-[24px] rounded-[16px]">
         {forecastData.map((day, index) => renderFutureWeather(day, index))}
       </div>
 
