@@ -43,10 +43,12 @@ export default function WeatherCard({
     return <Cloud className="h-6 w-6 text-white opacity-70" />;
   };
 
-  const onGotoWeatherApp = () => {
-    console.log("goto weather app", city);
-    gAppManager.createApp(AppType.Weather, { city });
+  const onGotoWeatherApp = (evt: React.MouseEvent<HTMLDivElement>) => {
+    if (evt.target === evt.currentTarget) {
+      gAppManager.createApp(AppType.Weather, { city });
+    }
   };
+
   return (
     <div
       onClick={onGotoWeatherApp}
