@@ -1,12 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import WeatherWidget from "./WeatherApp";
+import "./main.css";
+import { addWebSpatialClassFlagOnHtml } from "@/lib/detect-env";
 
-function App() {
-  return <div> this is a weather page </div>;
-}
-
+addWebSpatialClassFlagOnHtml();
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <WeatherWidget />
   </StrictMode>
 );
