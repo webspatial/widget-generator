@@ -18,7 +18,7 @@ export default function App() {
 
     useEffect(() => {
         if(canvasEl.current){
-            WhiteboardConfig.mode = new URLSearchParams(window.location.search).get('backgroundColor') === 'E9E9E9'? 'light' : 'dark'
+            WhiteboardConfig.mode = new URLSearchParams(window.location.search).get('selectedTemplate') === 'dark'? 'dark' : 'light'
             // #1A1A1A, #E9E9E9
             const backgroundColor = WhiteboardConfig[WhiteboardConfig.mode].background
             painManager.init(backgroundColor, canvasEl.current);
