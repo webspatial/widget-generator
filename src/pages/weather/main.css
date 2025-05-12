@@ -1,0 +1,30 @@
+#root {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+html.webspatial {
+  background-color: transparent;
+  --xr-background-material: translucent;
+  border-radius: 40px;
+
+  body {
+    background-color: transparent;
+  }
+
+  #root {
+    background-color: rgba(128, 128, 128, 0);
+
+    > div {
+      background-color: rgba(128, 128, 128, 0);
+
+      > div {
+        background-color: rgba(128, 128, 128, 0);
+      }
+    }
+  }
+
+  .translucent-material {
+    --xr-background-material: translucent;
+    background-color: transparent;
+  }
+}
