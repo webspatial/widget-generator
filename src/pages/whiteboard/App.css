@@ -1,0 +1,56 @@
+.whiteboard{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #504941;
+    padding: 0 24px 28px 24px;
+    min-width: 700px;
+    min-height: 600px;
+}
+.whiteboard-title{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-size:29px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.whiteboard-title-text{
+    pointer-events: none;
+    user-select: none;
+}
+
+.whiteboard-title-button{
+    width:44px;
+    height:44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    background-color: #FFFFFF1A;
+}
+
+.whiteboard-title-button:hover{
+    background-color: #FFFFFF33;
+}
+
+.whiteboard-title-button img{
+    pointer-events: none;
+    user-select: none;
+    width:24px;
+}
+
+.board-container{
+    position: relative;
+    width:100%;
+    height:100%;
+}
