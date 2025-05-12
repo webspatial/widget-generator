@@ -17,10 +17,11 @@ class PainManager {
             background: background,
             antialias: true,
             autoDensity: true,
-            resizeTo: window,
+            resizeTo: parent,
         })
         this.backgroundColor = background;
         parent.appendChild(this.app.canvas)
+        this.app.canvas.style.borderRadius = '16px';
         this.setupDrawing();
     }
 
@@ -29,8 +30,6 @@ class PainManager {
     
         this.app.stage.eventMode = 'static';
         this.app.stage.hitArea = this.app.screen;
-        console.log(this.app.stage)
-        
         this.app.stage.on('pointerdown', this.startDrawing.bind(this));
         this.app.stage.on('pointermove', this.draw.bind(this));
         this.app.stage.on('pointerup', this.endDrawing.bind(this));

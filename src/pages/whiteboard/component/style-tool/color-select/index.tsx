@@ -62,25 +62,27 @@ export default function ColorSelect(props:ColorSelectProps){
         setLineWidths(props.widths)
     }, [props.widths])
 
-    return <div className='color-select'>
-        {
-            colors.map((color, index) => {
-                return <div id={`color-${index}`} className='color-item' key={index} onClick={onSelectColor}>
-                    <div className="color-item-bg" style={{backgroundColor: color.color}}>
-                        {color.isSelected && <img className='color-selected' src='assets/pages/whiteboard/style/submit.png' />}
+    return <div className="color-select-container">
+        <div className='color-select'>
+            {
+                colors.map((color, index) => {
+                    return <div id={`color-${index}`} className='color-item' key={index} onClick={onSelectColor}>
+                        <div className="color-item-bg" style={{backgroundColor: color.color}}>
+                            {color.isSelected && <img className='color-selected' src='assets/pages/whiteboard/style/submit.png' />}
+                        </div>
                     </div>
-                </div>
-            })
-        }
-        <div className="color-select-divider" />
-        {
-            lineWidths.map((item, index) => {
-                return <div className='line-width-item' key={index}>
-                    <div id={`width-${index}`} className={"line-width-item-bg" + (item.isSelected ? " line-width-selected" : '')} onClick={onSelectLineWidth}>
-                        <img className='line-width-img' src={`assets/pages/whiteboard/style/line-width${item.width}.png`} />
+                })
+            }
+            <div className="color-select-divider" />
+            {
+                lineWidths.map((item, index) => {
+                    return <div className='line-width-item' key={index}>
+                        <div id={`width-${index}`} className={"line-width-item-bg" + (item.isSelected ? " line-width-selected" : '')} onClick={onSelectLineWidth}>
+                            <img className='line-width-img' src={`assets/pages/whiteboard/style/line-width${item.width}.png`} />
+                        </div>
                     </div>
-                </div>
-            })
-        }
+                })
+            }
+        </div>
     </div>
 }

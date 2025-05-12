@@ -9,6 +9,10 @@ export default function App() {
     const [colors, setColors] = useState<ColorProps[]>([])
     const [widths, setWidths] = useState<LineWidthProps[]>([])
     const canvasEl = useRef<HTMLDivElement>(null);
+
+    const onNewBoard = () => {
+        console.log('new board')
+    }
     
 
     useEffect(() => {
@@ -36,8 +40,15 @@ export default function App() {
     }, [])
 
   return <div className="whiteboard">
-        <div ref={canvasEl} className="board-container"></div>
-        <ColorSelect colors={colors} widths={widths} />
+        <div className="whiteboard-title">
+            <div className="whiteboard-title-text">White Board</div>
+            <div className="whiteboard-title-button" onClick={onNewBoard}>
+                <img src='assets/pages/whiteboard/plus.png' />
+            </div>
+        </div>
+        <div ref={canvasEl} className="board-container">
+            <ColorSelect colors={colors} widths={widths} />
+        </div>
         <EditTool />
   </div>
 }

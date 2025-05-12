@@ -1,3 +1,12 @@
+.color-select-container{
+    position: absolute;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
 .color-select{
     width:414px;
     height:56px;
