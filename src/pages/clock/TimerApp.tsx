@@ -15,7 +15,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
   // State management
   const [totalSeconds, setTotalSeconds] = useState(initialSeconds); // Initialize with props
   const [remainingSeconds, setRemainingSeconds] = useState(initialSeconds); // Initialize with props
-  const [timerState, setTimerState] = useState<TimerState>("playing"); // Initial state is playing
+  const [timerState, setTimerState] = useState<TimerState>("idle"); // Initial state is playing
   const [isMuted, setIsMuted] = useState(false);
 
   // Calculate progress percentage
@@ -287,7 +287,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
 
       {/* Audio element */}
       <audio ref={audioRef} preload="auto">
-        <source src="/alarm.mp3" type="audio/mpeg" />
+        <source src="./alarm.mp3" type="audio/mp3" />
       </audio>
     </div>
   );
