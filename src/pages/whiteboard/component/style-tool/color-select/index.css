@@ -1,21 +1,25 @@
 .color-select-container{
     position: absolute;
-    width:100%;
+    width:414px;
+    height:66px;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
-    left: 0;
+    left: calc(50% - 212px);
+    border-radius: 100px;
+    background-color: transparent;
+    --xr-background-material: translucent;
+    --xr-back:50;
 }
 .color-select{
     width:414px;
     height:56px;
+    margin-top:10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top:10px;
     background-color: #8080804D;
     border-radius: 100px;
     gap:6px;
@@ -28,7 +32,6 @@
 }
 
 .color-item-bg{
-    pointer-events: none;
     width:20px;
     height:20px;
     border-radius: 50%;
@@ -64,8 +67,6 @@
 }
 
 .line-width-img{
-    pointer-events: none;
-    user-select: none;
     width:24px;
     height:24px;
 }
