@@ -5,17 +5,17 @@ import ColorSelect from "./component/style-tool/color-select";
 import { ColorProps, LineWidthProps } from "./types";
 import EditTool from "./component/editTool";
 import { WhiteboardConfig } from "./utils/config";
+import { AppType, gAppManager } from "../home/app-manager";
 
 export default function App() {
     const [colors, setColors] = useState<ColorProps[]>([])
     const [widths, setWidths] = useState<LineWidthProps[]>([])
     const canvasEl = useRef<HTMLDivElement>(null);
 
-    const onNewBoard = () => {
-        console.log('new board')
-    }
+    const jumpToHome = () => {
+        gAppManager.createApp(AppType.Home, { from: AppType.Whiteboard });
+    };
     
-
     useEffect(() => {
         if(canvasEl.current){
             WhiteboardConfig.mode = new URLSearchParams(window.location.search).get('selectedTemplate') === 'dark'? 'dark' : 'light'
@@ -44,8 +44,8 @@ export default function App() {
   return <div className="whiteboard">
         <div className="whiteboard-title">
             <div className="whiteboard-title-text">White Board</div>
-            <div className="whiteboard-title-button" onClick={onNewBoard}>
-                <img src='assets/pages/whiteboard/plus.png' />
+            <div className="whiteboard-title-button" onClick={jumpToHome}>
+                <IconPlus />
             </div>
         </div>
         <div ref={canvasEl} className="board-container">
@@ -53,4 +53,11 @@ export default function App() {
         </div>
         <EditTool />
   </div>
+}
+
+function IconPlus({ className }:{ className?:string }){
+  return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+  <path d="M13 10.5H20.5V13H13V20.5H10.5V13H3V10.5H10.5V3H13V10.5Z" fill="white"/>
+  </svg>
+  
 }

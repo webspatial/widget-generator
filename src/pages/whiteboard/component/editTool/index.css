@@ -6,6 +6,9 @@
     justify-content: center;
     bottom: 0;
     left: 0;
+    border-radius: 100px;
+    background-color: transparent;
+    --xr-back:150;
 }
 
 .edit-tool-bar{
@@ -16,9 +19,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-bottom:10px;
-    background-color: #8080804D;
-    border-radius: 100px;
+    margin-top:10px;
+    background-color: #808080AA;
     gap:6px;
     transition: width 0.2s ease-in-out;
 }
