@@ -7,7 +7,7 @@
       "height": 672
     }
   },
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "/icons/icon-192.png",
