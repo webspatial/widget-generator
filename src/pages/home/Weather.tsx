@@ -11,9 +11,9 @@ const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 export default function Weather() {
   const [cities, setCities] = useState<CityWeather[]>([
-    { city: "San Jose", isLoading: true },
     { city: "Beijing", isLoading: true },
     { city: "Shanghai", isLoading: true },
+    { city: "San Jose", isLoading: true },
   ]);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearching, setIsSearching] = useState(false);

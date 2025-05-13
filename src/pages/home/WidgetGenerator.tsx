@@ -4,9 +4,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Timer from "./Timer";
 import WhiteBoard from "./WhiteBoard";
 import Weather from "./Weather";
+import { AppType } from "./app-manager";
 
-export default function WidgetGenerator() {
-  const [activeTab, setActiveTab] = useState("timer");
+export default function WidgetGenerator(props: { from: AppType }) {
+  const [activeTab, setActiveTab] = useState<AppType>(props.from);
 
   // Common content card wrapper with fixed dimensions
   const ContentCard = ({ children }: { children: React.ReactNode }) => (
@@ -32,7 +33,7 @@ export default function WidgetGenerator() {
             className="translucent-material w-[366px] h-[60px] bg-[#c4c4c4] p-1 rounded-full"
           >
             <TabsTrigger
-              value="timer"
+              value="clock"
               className="rounded-full h-[48px] px-6 text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
             >
               Timer
@@ -53,7 +54,7 @@ export default function WidgetGenerator() {
         </div>
 
         {/* Timer Content */}
-        <TabsContent value="timer" className="p-0 m-0">
+        <TabsContent value="clock" className="p-0 m-0">
           <ContentCard>
             <Timer />
           </ContentCard>
