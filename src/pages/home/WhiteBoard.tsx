@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { gAppManager, AppType } from "./app-manager";
+import { gAppManager, AppType } from "../../lib/app-manager";
 
 // Checkbox component for template selection
 const TemplateCheckbox = ({ isSelected }: { isSelected: boolean }) => (

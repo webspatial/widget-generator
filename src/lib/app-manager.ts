@@ -1,4 +1,6 @@
 import { onCloseAppMessage } from "@/lib/channel-message";
+import {initScene} from "@webspatial/react-sdk"
+import {WindowContainerOptions} from "@webspatial/core-sdk"
 
 export enum AppType {
   Clock = "clock",
@@ -12,6 +14,37 @@ const AppURL = {
   [AppType.Weather]: "/src/pages/weather/index.html",
   [AppType.Whiteboard]: "/src/pages/whiteboard/index.html",
   [AppType.Home]: "/index.html",
+};
+
+const AppDefaultSize: Record<string, WindowContainerOptions> = {
+  [AppType.Clock]: {
+    defaultSize: {
+      width: 402,
+      height: 456,
+    },
+     resizability: "contentSize",
+  },
+  [AppType.Weather]: {
+    defaultSize: {
+      width: 456,
+      height: 438,
+    },
+    resizability: "contentSize",
+  },
+  [AppType.Whiteboard]: {
+    defaultSize: {
+      width: 700,
+      height: 736,
+    },
+    resizability: "contentSize",
+  },
+  [AppType.Home]: {
+    defaultSize: {
+      width: 402,
+      height: 610,
+    },
+    resizability: "contentSize",
+  },
 };
 
 class AppManager {
@@ -31,7 +64,10 @@ class AppManager {
       urlParams += `${key}=${params[key]}&`;
     }
 
-    const windowProxy = window.open(`${url}?${urlParams}`);
+    const randomSceneName = new Date().getTime().toString(36) +  Math.random().toString(36).substring(2, 15);
+    initScene(randomSceneName,   (_) =>  (AppDefaultSize[appType]))
+
+    const windowProxy = window.open(`${url}?${urlParams}`, randomSceneName);
     if (windowProxy) {
       this._appList.push(windowProxy);
     } else {

@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Timer from "./Timer";
 import WhiteBoard from "./WhiteBoard";
 import Weather from "./Weather";
-import { AppType } from "./app-manager";
+import { AppType } from "../../lib/app-manager";
 
 export default function WidgetGenerator(props: { from: AppType }) {
   const [activeTab, setActiveTab] = useState<AppType>(props.from);

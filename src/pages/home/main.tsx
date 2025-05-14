@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import WidgetGenerator from "./WidgetGenerator";
 import "./main.css";
 import { addWebSpatialClassFlagOnHtml } from "@/lib/detect-env";
-import { AppType } from "./app-manager";
+import { AppType } from "../../lib/app-manager";
 
 addWebSpatialClassFlagOnHtml();
 

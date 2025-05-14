@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Plus } from "lucide-react";
-import { AppType, gAppManager } from "../home/app-manager";
+import { AppType, gAppManager } from "../../lib/app-manager";
 
 // Define state machine states
 type TimerState = "idle" | "playing" | "paused" | "finished";

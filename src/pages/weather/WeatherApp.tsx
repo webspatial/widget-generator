@@ -4,7 +4,7 @@ import type React from "react";
 
 import { Plus, Cloud, CloudRain, Sun, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
-import { gAppManager, AppType } from "../home/app-manager";
+import { gAppManager, AppType } from "../../lib/app-manager";
 
 // Types for OpenWeatherMap API responses
 interface WeatherData {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AppType, gAppManager } from "./app-manager";
+import { AppType, gAppManager } from "../../lib/app-manager";
 
 export default function Timer() {
   const [hours, setHours] = useState("00");

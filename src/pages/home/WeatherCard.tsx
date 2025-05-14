@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { WeatherData } from "./weather-type";
-import { gAppManager, AppType } from "./app-manager";
+import { gAppManager, AppType } from "../../lib/app-manager";
 
 interface WeatherCardProps {
   city: string;

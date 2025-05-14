@@ -5,7 +5,7 @@ import ColorSelect from "./component/style-tool/color-select";
 import { ColorProps, LineWidthProps } from "./types";
 import EditTool from "./component/editTool";
 import { WhiteboardConfig } from "./utils/config";
-import { AppType, gAppManager } from "../home/app-manager";
+import { AppType, gAppManager } from "@/lib/app-manager";
 
 export default function App() {
     const [colors, setColors] = useState<ColorProps[]>([])
