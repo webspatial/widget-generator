@@ -20,7 +20,7 @@ export default function WidgetGenerator(props: { from: AppType }) {
   );
 
   return (
-    <div className="mx-auto  rounded-[30px] p-5 flex flex-col items-center">
+    <div className="mx-auto  rounded-[30px]  flex flex-col items-center">
       {/* Tabs Navigation */}
       <Tabs
         value={activeTab}

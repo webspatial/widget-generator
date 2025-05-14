@@ -9,12 +9,11 @@ import type { CityWeather } from "./weather-type";
 const API_KEY = "f98e4bba1f6eb2af7dde364a5ebc367f";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
+const citiesFromLocalStorage = localStorage.getItem('cities') ?? "New York,Los Angeles,Tokoy";
+const defaultCities = citiesFromLocalStorage.split(",").map((city) => city.trim()).map((city) => ({ city, isLoading: true }));
+
 export default function Weather() {
-  const [cities, setCities] = useState<CityWeather[]>([
-    { city: "Beijing", isLoading: true },
-    { city: "Shanghai", isLoading: true },
-    { city: "San Jose", isLoading: true },
-  ]);
+  const [cities, setCities] = useState<CityWeather[]>(defaultCities);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
@@ -43,6 +42,10 @@ export default function Weather() {
       throw error;
     }
   };
+
+  useEffect(() => {
+    localStorage.setItem('cities', cities.map((city) => city.city).join(","));
+  }, [cities]);
 
   // Load all weather data on initial render
   useEffect(() => {
@@ -120,7 +123,7 @@ export default function Weather() {
 
   return (
     <div>
-      <h1 className="text-[36px] font-bold text-white mb-2">Weather</h1>
+      <h1 className="text-[36px] font-bold text-white mb-6">Weather</h1>
 
       {/* Search Form */}
       <form onSubmit={handleAddCity} className="relative mb-4">
