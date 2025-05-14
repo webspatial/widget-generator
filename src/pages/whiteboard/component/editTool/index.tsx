@@ -2,7 +2,7 @@ import { painManager } from '@/lib/whiteboard/PainManager'
 import './index.css'
 import { useEffect, useState } from "react"
 
-export default function EditTool(props) {
+export default function EditTool(props:{showTool:(show:boolean) => void}) {
     const [canDraw, setCanDraw] = useState<boolean>(true)
     const [canUndo, setCanUndo] = useState<boolean>(false)
     const [canRedo, setCanRedo] = useState<boolean>(false)

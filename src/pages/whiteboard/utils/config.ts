@@ -1,4 +1,19 @@
-const WhiteboardConfig = {
+type Mode = 'dark' | 'light';
+
+interface ThemeConfig {
+    background: string;
+    cursor: string;
+    colors: string[];
+}
+
+interface WhiteboardConfigType {
+    mode: Mode;
+    lineWidths: number[];
+    dark: ThemeConfig;
+    light: ThemeConfig;
+}
+
+const WhiteboardConfig: WhiteboardConfigType = {
     mode: 'dark',
     lineWidths: [
         5,
@@ -29,4 +44,4 @@ const WhiteboardConfig = {
     }
 }
 
-export {WhiteboardConfig}
+export { WhiteboardConfig };
