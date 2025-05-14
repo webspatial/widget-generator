@@ -43,10 +43,8 @@ export default function WeatherCard({
     return <Cloud className="h-6 w-6 text-white opacity-70" />;
   };
 
-  const onGotoWeatherApp = (evt: React.MouseEvent<HTMLDivElement>) => {
-    if (evt.target === evt.currentTarget) {
-      gAppManager.createApp(AppType.Weather, { city });
-    }
+  const onGotoWeatherApp = ( ) => {
+    gAppManager.createApp(AppType.Weather, { city });
   };
 
   return (
@@ -91,7 +89,7 @@ export default function WeatherCard({
 
       <Button
         variant="ghost"
-        onClick={() => onRemove(city)}
+        onClick={(evt) => { evt.stopPropagation(); onRemove(city); }}
         className="text-white hover:bg-[#888888]/30 rounded-full p-3 h-auto w-auto transition-colors"
       >
         <Trash2  className="size-[24px]  " />
