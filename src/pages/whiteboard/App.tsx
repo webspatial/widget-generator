@@ -10,11 +10,16 @@ import { AppType, gAppManager } from "../home/app-manager";
 export default function App() {
     const [colors, setColors] = useState<ColorProps[]>([])
     const [widths, setWidths] = useState<LineWidthProps[]>([])
+    const [showTool, setShowTool] = useState<boolean>(true)
     const canvasEl = useRef<HTMLDivElement>(null);
 
     const jumpToHome = () => {
         gAppManager.createApp(AppType.Home, { from: AppType.Whiteboard });
     };
+
+    const onShowTool = (show:boolean) => {
+        setShowTool(show)
+    }
     
     useEffect(() => {
         if(canvasEl.current){
@@ -49,9 +54,9 @@ export default function App() {
             </div>
         </div>
         <div ref={canvasEl} className="board-container">
-            <ColorSelect colors={colors} widths={widths} />
+            {<ColorSelect show={showTool} colors={colors} widths={widths} />}
         </div>
-        <EditTool />
+        <EditTool showTool={onShowTool} />
   </div>
 }
 

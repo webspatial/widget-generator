@@ -2,7 +2,7 @@ import { painManager } from '@/lib/whiteboard/PainManager'
 import './index.css'
 import { useEffect, useState } from "react"
 
-export default function EditTool() {
+export default function EditTool(props) {
     const [canDraw, setCanDraw] = useState<boolean>(true)
     const [canUndo, setCanUndo] = useState<boolean>(false)
     const [canRedo, setCanRedo] = useState<boolean>(false)
@@ -50,6 +50,10 @@ export default function EditTool() {
         painManager.active()
         setCanEdit(true)
     }
+
+    useEffect(() => {
+        props.showTool(canEdit)
+    }, [canEdit])
 
     useEffect(() => {
         painManager.onDraw = () => {

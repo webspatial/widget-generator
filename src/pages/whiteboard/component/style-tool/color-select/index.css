@@ -1,7 +1,8 @@
 .color-select-container{
     position: absolute;
+    margin-top:10px;
     width:414px;
-    height:66px;
+    height:56px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,12 +10,22 @@
     border-radius: 100px;
     background-color: transparent;
     --xr-background-material: translucent;
+    /* background-color: #FFF; */
     --xr-back:50;
+    transition: all 0.3s ease-in-out;
 }
+
+.show-tool{
+    opacity: 1;
+}
+
+.hide-tool{
+    opacity: 0;
+}
+
 .color-select{
     width:414px;
     height:56px;
-    margin-top:10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,18 +37,21 @@
 }
 
 .color-item{
+    cursor: pointer;
     width:44px;
     height:44px;
     padding: 12px;
+    border-radius: 50%;
+}
+
+.color-item:hover{
+    background-color: #FFFFFF1A;
 }
 
 .color-item-bg{
     width:20px;
     height:20px;
     border-radius: 50%;
-}
-
-.color-selected{
     pointer-events: none;
     user-select: none;
 }
@@ -54,6 +68,7 @@
 }
 
 .line-width-item-bg{
+    cursor: pointer;
     width:34px;
     height:34px;
     border-radius: 50%;

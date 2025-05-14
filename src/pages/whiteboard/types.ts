@@ -11,6 +11,7 @@ export type LineWidthProps = {
 }
 
 export type ColorSelectProps = {
+    show: boolean
     colors: ColorProps[]
     widths: LineWidthProps[]
 }

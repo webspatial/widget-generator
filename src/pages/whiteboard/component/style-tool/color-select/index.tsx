@@ -60,8 +60,8 @@ export default function ColorSelect(props:ColorSelectProps){
         setLineWidths(props.widths)
     }, [props.widths])
 
-    return <div enable-xr className="color-select-container">
-        <div className='color-select translucent-material'>
+    return <div enable-xr className={`color-select-container ${props.show ? 'show-tool' : 'hide-tool'}`}>
+        <div className='color-select'>
             {
                 colors.map((color, index) => {
                     return <div id={`color-${index}`} className='color-item' key={index} onClick={onSelectColor}>
