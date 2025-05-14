@@ -1,9 +1,12 @@
 html.webspatial {
   background-color: transparent;
   --xr-background-material: transparent;
+  border-radius: 30px;
 
   body {
     background-color: transparent;
+    width: 402px;
+    height: 610px;
   }
 
   .translucent-material {

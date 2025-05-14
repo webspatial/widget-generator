@@ -13,7 +13,7 @@ export default function WidgetGenerator(props: { from: AppType }) {
   const ContentCard = ({ children }: { children: React.ReactNode }) => (
     <div
       enable-xr
-      className="w-[402px] h-[540px] bg-[#c4c4c4] translucent-material rounded-[30px] p-6"
+      className="w-[402px] h-[540px] bg-[#c4c4c4] translucent-material rounded-[30px] p-[24px] pt-[28.xpx]"
     >
       {children}
     </div>
@@ -24,13 +24,13 @@ export default function WidgetGenerator(props: { from: AppType }) {
       {/* Tabs Navigation */}
       <Tabs
         value={activeTab}
-        onValueChange={setActiveTab}
+        onValueChange={v => setActiveTab(v as AppType)}
         className="flex flex-col items-center"
       >
-        <div className="w-[402px] flex justify-center mb-6">
+        <div className="w-[402px] flex justify-center ">
           <TabsList
             enable-xr
-            className="translucent-material w-[366px] h-[60px] bg-[#c4c4c4] p-1 rounded-full"
+            className="translucent-material w-[366px] h-[60px] bg-[#c4c4c4] p-1 rounded-full text-[19px]]"
           >
             <TabsTrigger
               value="clock"

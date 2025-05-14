@@ -94,7 +94,7 @@ export default function WeatherCard({
         onClick={() => onRemove(city)}
         className="text-white hover:bg-[#888888]/30 rounded-full p-3 h-auto w-auto transition-colors"
       >
-        <Trash2 className="h-8 w-8" />
+        <Trash2  className="size-[24px]  " />
       </Button>
     </div>
   );

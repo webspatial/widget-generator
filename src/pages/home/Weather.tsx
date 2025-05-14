@@ -120,10 +120,10 @@ export default function Weather() {
 
   return (
     <div>
-      <h1 className="text-[36px] font-bold text-white mb-6">Weather</h1>
+      <h1 className="text-[36px] font-bold text-white mb-2">Weather</h1>
 
       {/* Search Form */}
-      <form onSubmit={handleAddCity} className="relative mb-6">
+      <form onSubmit={handleAddCity} className="relative mb-4">
         <div className="relative flex items-center">
           <div className="relative flex-grow">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#888888] h-5 w-5" />
@@ -153,7 +153,7 @@ export default function Weather() {
       </form>
 
       {/* City List */}
-      <div className="space-y-4 max-h-[350px] overflow-auto pr-2">
+      <div className="space-y-4 max-h-[350px] overflow-auto scrollbar-hide pr-2">
         {cities.map((cityData) => (
           <WeatherCard
             key={cityData.city}

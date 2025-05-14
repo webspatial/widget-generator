@@ -5,7 +5,7 @@ import { AppType, gAppManager } from "../../lib/app-manager";
 
 export default function Timer() {
   const [hours, setHours] = useState("00");
-  const [minutes, setMinutes] = useState("15");
+  const [minutes, setMinutes] = useState("01");
   const [seconds, setSeconds] = useState("00");
 
   const incrementTime = (type: "hours" | "minutes" | "seconds") => {
@@ -54,7 +54,7 @@ export default function Timer() {
             onClick={() => incrementTime("hours")}
             className="text-white opacity-50 hover:opacity-100"
           >
-            <ChevronUp className="h-5 w-5" />
+            <ChevronUp className="h-8 w-8" />
           </button>
           <div className="text-white text-6xl font-bold tabular-nums w-[80px] text-center">
             {hours}
@@ -63,7 +63,7 @@ export default function Timer() {
             onClick={() => decrementTime("hours")}
             className="text-white opacity-50 hover:opacity-100"
           >
-            <ChevronDown className="h-5 w-5" />
+            <ChevronDown className="h-8 w-8" />
           </button>
           <span className="text-white text-sm mt-1">hours</span>
         </div>
@@ -76,7 +76,7 @@ export default function Timer() {
             onClick={() => incrementTime("minutes")}
             className="text-white opacity-50 hover:opacity-100"
           >
-            <ChevronUp className="h-5 w-5" />
+            <ChevronUp className="h-8 w-8" />
           </button>
           <div className="text-white text-6xl font-bold tabular-nums w-[80px] text-center">
             {minutes}
@@ -85,7 +85,7 @@ export default function Timer() {
             onClick={() => decrementTime("minutes")}
             className="text-white opacity-50 hover:opacity-100"
           >
-            <ChevronDown className="h-5 w-5" />
+            <ChevronDown className="h-8 w-8" />
           </button>
           <span className="text-white text-sm mt-1">minutes</span>
         </div>
@@ -98,7 +98,7 @@ export default function Timer() {
             onClick={() => incrementTime("seconds")}
             className="text-white opacity-50 hover:opacity-100"
           >
-            <ChevronUp className="h-5 w-5" />
+            <ChevronUp className="h-8 w-8" />
           </button>
           <div className="text-white text-6xl font-bold tabular-nums w-[80px] text-center">
             {seconds}
@@ -107,7 +107,7 @@ export default function Timer() {
             onClick={() => decrementTime("seconds")}
             className="text-white opacity-50 hover:opacity-100"
           >
-            <ChevronDown className="h-5 w-5" />
+            <ChevronDown className="h-8 w-8" />
           </button>
           <span className="text-white text-sm mt-1">seconds</span>
         </div>
