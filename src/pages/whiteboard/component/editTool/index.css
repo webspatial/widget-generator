@@ -7,7 +7,7 @@
     bottom: 0;
     left: 0;
     background-color: transparent;
-    --xr-back:150;
+    --xr-back:36;
 }
 
 .edit-tool-bar{
@@ -26,6 +26,7 @@
 }
 
 .edit-btn-container{
+    cursor: pointer;
     user-select: none; /* 标准语法 */
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
@@ -43,6 +44,7 @@
 }
 
 .edit-disable{
+    cursor: not-allowed;
     opacity: 0.5;
 }
 
@@ -63,10 +65,7 @@
 }
 
 .edit-start-container{
-    user-select: none; /* 标准语法 */
-    -webkit-user-select: none; /* Chrome/Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
+    cursor: pointer;
     width:117px;
     height:52px;
     border-radius: 500px;
@@ -84,9 +83,18 @@
 
 .edit-start-img{
     pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     width:24px;
 }
 
 .edit-start-txt{
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     font-size: 19px;
 }
