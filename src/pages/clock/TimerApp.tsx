@@ -54,6 +54,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
           if (prev <= 1) {
             // Play sound when timer ends
             if (!isMuted && audioRef.current) {
+              audioRef.current.muted = isMuted;
               audioRef.current.play();
             }
             clearInterval(interval!);
@@ -113,6 +114,19 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
   const toggleMute = () => {
     setIsMuted((prev) => !prev);
   };
+
+  useEffect(() => {
+    if ( audioRef.current && audioRef.current.played) {
+      audioRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
+
+  useEffect(() => {
+    if ( timerState !== 'finished' && audioRef.current && audioRef.current.played) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  }, [timerState]);
 
   // Get progress bar color based on current state
   const getProgressColor = () => {
@@ -294,7 +308,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
       </div>
 
       {/* Audio element */}
-      <audio ref={audioRef} preload="auto">
+      <audio ref={audioRef} preload="auto" muted >
         <source src="./alarm.mp3" type="audio/mp3" />
       </audio>
     </div>
