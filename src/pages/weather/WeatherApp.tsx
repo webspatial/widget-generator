@@ -59,7 +59,7 @@ interface WeatherWidgetProps {
 export default function WeatherWidget({
   city = "Beijing",
 }: WeatherWidgetProps) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [weatherData, setWeatherData] = useState<{
     name: string;
@@ -337,8 +337,8 @@ export default function WeatherWidget({
         onClick={() => setActiveDay(index)}
         className={`flex w-[80px] h-[120px] flex-1 flex-col items-center justify-center border-[1px]   ${
           activeDay === index
-            ? "bg-[#4a4a4a]"
-            : "bg-[#3d3d3d] hover:bg-[#454545]"
+            ? "bg-black/40"
+            : "bg-black/20 hover:bg-[#454545]"
         }`}
       >
         <span className="text-[13px]">{day.name}</span>
@@ -375,26 +375,31 @@ export default function WeatherWidget({
         <h1 className="text-[29px] font-bold">{weatherData?.name || city}</h1>
         <button
           onClick={jumpToHome}
-          className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#5e5e5e] text-white transition hover:bg-[#6e6e6e]"
+          className="flex h-[44px] w-[44px] items-center justify-center rounded-full  bg-white/20 hover:bg-white/30 active:bg-white/40 transition-colors"
         >
           <Plus className="h-[24px] w-[24px]" />
         </button>
       </div>
 
-      <div className="w-[392px] h-[166px]">{renderWhetherDetail()}</div>
-
+      { !error && <div className="w-[392px] h-[166px]">{renderWhetherDetail()}</div> }
+      { !error &&
       <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] mt-[24px] rounded-[16px]">
         {forecastData.map((day, index) => renderFutureWeather(day, index))}
       </div>
+      }
 
       {error && (
-        <div className="bg-[#3d3d3d] p-2 text-center text-xs text-gray-300">
-          <p>{error}</p>
+        <div className="flex flex-col   w-full  pt-[100px] text-[17px] items-center justify-center  text-white">
+          <p> Failed to load, Please Retry </p>
           <button
             onClick={fetchWeatherData}
-            className="mt-1 text-xs underline hover:text-white"
+            className="mt-[30px] text-xs underline hover:text-white rounded-full"
           >
-            Retry
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="22" fill="white" fill-opacity="0.1"  />
+              <path d="M22 32.3125C27.6954 32.3125 32.3125 27.6954 32.3125 22H30.25C30.25 26.5563 26.5563 30.25 22 30.25C17.4437 30.25 13.75 26.5563 13.75 22C13.75 17.4437 17.4437 13.75 22 13.75C24.2519 13.75 26.2932 14.6523 27.7818 16.115L25.9841 17.9128C25.7697 18.1272 25.9215 18.4938 26.2247 18.4938H31.075C31.3598 18.4938 31.5906 18.2629 31.5906 17.9781V13.1278C31.5906 12.8247 31.224 12.6728 31.0097 12.8872L29.2403 14.6566C27.3783 12.8206 24.8215 11.6875 22 11.6875C16.3046 11.6875 11.6875 16.3046 11.6875 22C11.6875 27.6954 16.3046 32.3125 22 32.3125Z" fill="white"/>
+            </svg>
+
           </button>
         </div>
       )}
