@@ -292,6 +292,12 @@ export default function WeatherWidget({
           </div>
 
           <img
+            enable-xr
+            style = {
+              {
+                '--xr-back': 16
+              }
+            }
             src="./sunny.jpeg"
             alt="Sunny"
             width={250}
@@ -323,6 +329,12 @@ export default function WeatherWidget({
               width={80}
               height={80}
               className="h-[80] w-[80] object-contain"
+              enable-xr
+              style = {
+                {
+                  '--xr-back': 16
+                }
+              }
             />
           </div>
         </div>
