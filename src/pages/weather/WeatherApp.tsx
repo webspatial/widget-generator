@@ -42,7 +42,7 @@ interface ForecastData {
 interface DayForecast {
   name: string;
   date: Date;
-  icon: JSX.Element;
+  icon: React.ReactNode;
   temp: string;
   current: string;
   temp_min: number;
