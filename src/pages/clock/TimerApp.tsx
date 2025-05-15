@@ -44,6 +44,27 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
     }
   };
 
+  const prepareSound = () => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0;
+      audioRef.current.play();
+    }
+  }
+
+  const playSound = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      audioRef.current.volume = 1;
+    }
+  };
+
+  const pauseSound = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+
   // Timer logic
   useEffect(() => {
     let interval: NodeJS.Timeout | null = null;
@@ -53,10 +74,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
         setRemainingSeconds((prev) => {
           if (prev <= 1) {
             // Play sound when timer ends
-            if (!isMuted && audioRef.current) {
-              audioRef.current.muted = isMuted;
-              audioRef.current.play();
-            }
+            playSound();
             clearInterval(interval!);
             setTimerState("finished"); // Transition to finished state
             return 0;
@@ -83,6 +101,9 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
       case "idle":
         if (action === "play") {
           setTimerState("playing");
+          if (audioRef.current) {
+            prepareSound();
+          }
         }
         break;
       case "playing":
@@ -116,15 +137,15 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
   };
 
   useEffect(() => {
-    if ( audioRef.current && audioRef.current.played) {
+    if (audioRef.current && audioRef.current.played) {
       audioRef.current.muted = isMuted;
     }
   }, [isMuted]);
 
   useEffect(() => {
-    if ( timerState !== 'finished' && audioRef.current && audioRef.current.played) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
+    if (timerState !== 'finished' && audioRef.current) {
+      // use zero volume to simulate pause effect;
+      pauseSound();
     }
   }, [timerState]);
 
@@ -218,7 +239,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
     <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="relative w-[402px] h-[456px] rounded-[40px] bg-[#d9d9d9] p-6 flex flex-col">
         {/* Top bar - total time and add button */}
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-4" >
           <div className="font-bold text-white" style={{ fontSize: "29px" }}>
             {formatTime(totalSeconds)}
           </div>
@@ -308,7 +329,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
       </div>
 
       {/* Audio element */}
-      <audio ref={audioRef} preload="auto" muted >
+      <audio ref={audioRef} loop preload="auto" >
         <source src="./alarm.mp3" type="audio/mp3" />
       </audio>
     </div>
