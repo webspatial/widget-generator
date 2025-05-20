@@ -231,7 +231,7 @@ export default function WeatherWidget({
       <button
         key={index}
         onClick={() => setActiveDay(index)}
-        className={`flex w-[80px] h-[120px] flex-1 flex-col items-center justify-center border-[1px]   ${activeDay === index
+        className={`flex w-[80px] h-[120px]   flex-col items-center justify-center    ${activeDay === index
           ? "bg-black/40"
           : "bg-black/20 hover:bg-[#454545]"
           }`}
@@ -268,7 +268,7 @@ export default function WeatherWidget({
 
       {!error && <WeatherDetailCard currentData={currentData} />}
       {!error &&
-        <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] absolute bottom-[36px] rounded-[16px]">
+        <div className="flex overflow-x-auto justify-evenly scrollbar-hide w-[408px] h-[120px] absolute bottom-[36px] rounded-[16px]">
           {forecastData.map((day, index) => renderFutureWeather(day, index))}
         </div>
       }
