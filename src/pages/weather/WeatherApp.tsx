@@ -6,7 +6,9 @@ import { Plus, Cloud, CloudRain, Sun, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { gAppManager, AppType } from "../../lib/app-manager";
 import { WeatherSmallSVG } from "./WeatherSmallSVG";
-import { WeatherCondition, getWeatherType } from "./WeatherCondition";
+import { getWeatherType } from "./WeatherCondition";
+import { WeatherBigSVG } from "./WeatherBigSVG";
+import { WeatherMiddleSVG } from "./WeatherMiddleSVG";
 
 // Types for OpenWeatherMap API responses
 interface WeatherData {
@@ -53,6 +55,51 @@ interface DayForecast {
   weatherId: number;
   isToday: boolean;
 }
+
+
+function WhetherDetailCard(props: { currentData: DayForecast }) {
+  const { currentData = {
+    isToday: true,
+    weatherId: 801,
+    name: "Today",
+    date: new Date(),
+    current: "21°",
+    temp: "18°-24°",
+  } } = props;
+  if (currentData.isToday) {
+    return (
+      <div className="flex items-start justify-between w-[376px] h-[174px]">
+        <div className="flex flex-col h-full">
+          <p className="text-[17px]">
+            {currentData.name}
+          </p>
+          <p className="text-[70px] font-light leading-none mt-[4px]">
+            {currentData.current}
+          </p>
+        </div>
+        <WeatherBigSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="flex flex-col items-start justify-between">
+        <p className="text-[17px]">
+          {currentData.name}
+        </p>
+
+        <div className="flex w-[271px] h-[80px] justify-between   items-center">
+          <p className="text-[54px] font-light leading-none">
+            {Math.round(currentData.temp_max)}°
+          </p>
+          <p className="ml-4 text-[54px] font-light leading-none text-gray-400">
+            {Math.round(currentData.temp_min)}°
+          </p>
+          <WeatherMiddleSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
+        </div>
+      </div>
+    );
+  }
+};
 
 interface WeatherWidgetProps {
   city?: string;
@@ -270,72 +317,6 @@ export default function WeatherWidget({
     gAppManager.createApp(AppType.Home, { from: AppType.Weather });
   };
 
-  const renderWhetherDetail = () => {
-    if (forecastData[activeDay]?.isToday) {
-      return (
-        <div className="flex items-start justify-between">
-          <div className="flex flex-col h-full">
-            <p className="text-[17px]">
-              {forecastData[activeDay]?.name || "Today"}
-            </p>
-            <p className="text-[70px] font-light leading-none mt-[4px]">
-              {forecastData[activeDay]?.current || "21°"}
-            </p>
-          </div>
-
-          <img
-            enable-xr
-            style={
-              {
-                '--xr-back': 16
-              }
-            }
-            src="./sunny.jpeg"
-            alt="Sunny"
-            width={250}
-            height={166}
-            className="h-[166] w-[250] object-contain"
-          />
-        </div>
-      );
-    } else {
-      return (
-        <div className="flex flex-col items-start justify-between">
-          <p className="text-[17px]">
-            {forecastData[activeDay]?.name || "Today"}
-          </p>
-
-          <div className="flex w-[347px] h-[80px] justify-between">
-            <div className="flex items-baseline">
-              <p className="text-[54px] font-light leading-none">
-                {Math.round(forecastData[activeDay]?.temp_max || 0)}°
-              </p>
-              <p className="ml-4 text-[54px] font-light leading-none text-gray-400">
-                {Math.round(forecastData[activeDay]?.temp_min || 0)}°
-              </p>
-            </div>
-
-            <img
-              src="./sunny.jpeg"
-              alt="Sunny"
-              width={80}
-              height={80}
-              className="h-[80] w-[80] object-contain"
-              enable-xr
-              style={
-                {
-                  '--xr-back': 16
-                }
-              }
-            />
-          </div>
-        </div>
-      );
-    }
-  };
-
-
-
   const renderFutureWeather = (day: any, index: number) => {
     return (
       <button
@@ -354,7 +335,7 @@ export default function WeatherWidget({
   };
 
   return (
-    <div className="w-full h-full text-white pl-[24px] pr-[24px] ">
+    <div className="w-full h-full text-white pl-[24px] pr-[24px] relative ">
       <div className="flex items-center h-[92px] justify-between">
         <h1 className="text-[29px] font-bold">{weatherData?.name || city}</h1>
         <button
@@ -365,9 +346,9 @@ export default function WeatherWidget({
         </button>
       </div>
 
-      {!error && <div className="w-[392px] h-[166px]">{renderWhetherDetail()}</div>}
+      {!error && <WhetherDetailCard currentData={forecastData[activeDay]} />}
       {!error &&
-        <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] mt-[24px] rounded-[16px]">
+        <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] absolute bottom-[36px] rounded-[16px]">
           {forecastData.map((day, index) => renderFutureWeather(day, index))}
         </div>
       }
