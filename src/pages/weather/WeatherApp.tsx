@@ -7,99 +7,8 @@ import { useState, useEffect } from "react";
 import { gAppManager, AppType } from "../../lib/app-manager";
 import { WeatherSmallSVG } from "./WeatherSmallSVG";
 import { getWeatherType } from "./WeatherCondition";
-import { WeatherBigSVG } from "./WeatherBigSVG";
-import { WeatherMiddleSVG } from "./WeatherMiddleSVG";
-
-// Types for OpenWeatherMap API responses
-interface WeatherData {
-  name: string;
-  main: {
-    temp: number;
-    temp_min: number;
-    temp_max: number;
-  };
-  weather: {
-    id: number;
-    main: string;
-    description: string;
-    icon: string;
-  }[];
-}
-
-interface ForecastData {
-  list: {
-    dt: number;
-    main: {
-      temp: number;
-      temp_min: number;
-      temp_max: number;
-    };
-    weather: {
-      id: number;
-      main: string;
-      description: string;
-      icon: string;
-    }[];
-  }[];
-}
-
-interface DayForecast {
-  name: string;
-  date: Date;
-  icon: React.ReactNode;
-  temp: string;
-  current: string;
-  temp_min: number;
-  temp_max: number;
-  fullWeather: string;
-  weatherId: number;
-  isToday: boolean;
-}
-
-
-function WhetherDetailCard(props: { currentData: DayForecast }) {
-  const { currentData = {
-    isToday: true,
-    weatherId: 801,
-    name: "Today",
-    date: new Date(),
-    current: "21°",
-    temp: "18°-24°",
-  } } = props;
-  if (currentData.isToday) {
-    return (
-      <div className="flex items-start justify-between w-[376px] h-[174px]">
-        <div className="flex flex-col h-full">
-          <p className="text-[17px]">
-            {currentData.name}
-          </p>
-          <p className="text-[70px] font-light leading-none mt-[4px]">
-            {currentData.current}
-          </p>
-        </div>
-        <WeatherBigSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
-      </div>
-    );
-  } else {
-    return (
-      <div className="flex flex-col items-start justify-between">
-        <p className="text-[17px]">
-          {currentData.name}
-        </p>
-
-        <div className="flex w-[271px] h-[80px] justify-between   items-center">
-          <p className="text-[54px] font-light leading-none">
-            {Math.round(currentData.temp_max)}°
-          </p>
-          <p className="ml-4 text-[54px] font-light leading-none text-gray-400">
-            {Math.round(currentData.temp_min)}°
-          </p>
-          <WeatherMiddleSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
-        </div>
-      </div>
-    );
-  }
-};
+import { DayForecast, WeatherData, ForecastData } from "./interface";
+import WeatherDetailCard from "./WeatherDetailCard";
 
 interface WeatherWidgetProps {
   city?: string;
@@ -335,7 +244,7 @@ export default function WeatherWidget({
   };
 
   return (
-    <div className="w-full h-full text-white pl-[24px] pr-[24px] relative ">
+    <div className="w-full h-full text-white pl-[24px] pr-[24px] relative bg-gradient-to-r from-[#5AA1FE] to-[#64C7FF]">
       <div className="flex items-center h-[92px] justify-between">
         <h1 className="text-[29px] font-bold">{weatherData?.name || city}</h1>
         <button
@@ -346,7 +255,7 @@ export default function WeatherWidget({
         </button>
       </div>
 
-      {!error && <WhetherDetailCard currentData={forecastData[activeDay]} />}
+      {!error && <WeatherDetailCard currentData={forecastData[activeDay]} />}
       {!error &&
         <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] absolute bottom-[36px] rounded-[16px]">
           {forecastData.map((day, index) => renderFutureWeather(day, index))}
