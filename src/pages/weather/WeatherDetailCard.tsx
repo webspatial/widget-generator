@@ -3,15 +3,7 @@ import { WeatherBigSVG } from "./WeatherBigSVG";
 import { getWeatherType } from "./WeatherCondition";
 import { WeatherMiddleSVG } from "./WeatherMiddleSVG";
 
-export default function WeatherDetailCard(props: { currentData: DayForecast }) {
-    const { currentData = {
-        isToday: true,
-        weatherId: 801,
-        name: "Today",
-        date: new Date(),
-        current: "21°",
-        temp: "18°-24°",
-    } } = props;
+export default function WeatherDetailCard({ currentData }: { currentData: DayForecast }) {
     if (currentData.isToday) {
         return (
             <div className="flex items-start justify-between w-[376px] h-[174px]">

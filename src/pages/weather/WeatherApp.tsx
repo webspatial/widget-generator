@@ -243,6 +243,15 @@ export default function WeatherWidget({
     );
   };
 
+  const currentData = forecastData[activeDay] || {
+    isToday: true,
+    weatherId: 801,
+    name: "Today",
+    date: new Date(),
+    current: "21°",
+    temp: "18°-24°",
+  }
+
   return (
     <div className="w-full h-full text-white pl-[24px] pr-[24px] relative bg-gradient-to-r from-[#5AA1FE] to-[#64C7FF]">
       <div className="flex items-center h-[92px] justify-between">
@@ -255,7 +264,7 @@ export default function WeatherWidget({
         </button>
       </div>
 
-      {!error && <WeatherDetailCard currentData={forecastData[activeDay]} />}
+      {!error && <WeatherDetailCard currentData={currentData} />}
       {!error &&
         <div className="flex overflow-x-auto scrollbar-hide w-[408px] h-[120px] absolute bottom-[36px] rounded-[16px]">
           {forecastData.map((day, index) => renderFutureWeather(day, index))}
