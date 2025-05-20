@@ -252,8 +252,10 @@ export default function WeatherWidget({
     temp: "18°-24°",
   }
 
+  const weatherType = getWeatherType(currentData.weatherId)
+
   return (
-    <div className="w-full h-full text-white pl-[24px] pr-[24px] relative bg-gradient-to-r from-[#5AA1FE] to-[#64C7FF]">
+    <div className={"w-full h-full text-white pl-[24px] pr-[24px] relative " + ` weather-${weatherType}`}>
       <div className="flex items-center h-[92px] justify-between">
         <h1 className="text-[29px] font-bold">{weatherData?.name || city}</h1>
         <button
