@@ -13,76 +13,76 @@ function SunnySVG() {
             <path d="M8.56672 9.19896C8.40005 9.19896 8.23338 9.13229 8.13338 8.99896L6.60005 7.46563C6.36672 7.23229 6.36672 6.83229 6.60005 6.56562C6.83338 6.33229 7.26672 6.33229 7.50005 6.56562L9.03338 8.09896C9.26672 8.33229 9.26672 8.73229 9.03338 8.99896C8.90005 9.13229 8.73338 9.19896 8.56672 9.19896Z" fill="url(#paint8_radial_387_6806)" />
             <defs>
                 <radialGradient id="paint0_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.845 23.8777) rotate(-90) scale(14.536)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8475 24.2604) rotate(-90) scale(15.1796 39.0875)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint2_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8454 24.2604) rotate(-90) scale(15.1796 39.0874)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint3_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8463 23.8145) scale(14.4206 14.5502)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint4_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8465 23.8142) scale(14.4206 14.5502)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint5_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8713 23.8156) scale(15.1796 39.0875)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint6_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8713 23.8145) scale(15.1796 39.0875)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint7_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8465 23.8125) scale(14.4206 14.3775)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
                 <radialGradient id="paint8_radial_387_6806" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.8463 23.8142) scale(14.4206 14.5502)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
             </defs>
         </svg>
@@ -109,64 +109,64 @@ function RainSVG() {
             <path d="M22.6067 23.6609L21.8734 22.3609C21.84 22.3276 21.7734 22.3276 21.74 22.3609L21.0067 23.6609C20.7734 24.1276 20.9734 24.6943 21.44 24.8943C21.8067 25.0609 22.2067 24.9609 22.4734 24.6943C22.74 24.4276 22.7734 23.9943 22.6067 23.6609Z" fill="url(#paint11_radial_388_6652)" />
             <defs>
                 <radialGradient id="paint0_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.1527 19.3862) scale(23.4988)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16.8063 21.3549) rotate(-90.3635) scale(22.0226 10.0103)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint2_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.1019 21.3688) scale(15.6659)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint3_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.46068 21.3765) scale(19.5823)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint4_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.2047 25.0095) scale(2.66124 3.92392)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint5_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.0937 28.6774) scale(2.66123 3.90364)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint6_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.2045 28.6774) scale(2.66123 3.9239)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint7_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.0851 25.0095) scale(2.66124 3.90366)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint8_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.974 28.6774) scale(2.66123 3.9239)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint9_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9655 25.0095) scale(2.66124 3.87264)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint10_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.8374 28.6775) scale(2.66124 3.92392)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint11_radial_388_6652" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.8286 25.0095) scale(2.66124 3.90366)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
             </defs>
         </svg>
@@ -189,52 +189,52 @@ function ThunderstormSVG() {
             <path d="M14.0332 17H17.7999C17.8999 17 17.9665 17.1 17.9332 17.2L15.7665 21.6667C15.7332 21.7667 15.7999 21.8667 15.8999 21.8667H19.3332C19.4665 21.8667 19.5332 22 19.4332 22.1L13.5332 28.9333C13.4332 29.0667 13.2332 28.9333 13.2999 28.8L14.8665 24.1667C14.8999 24.0667 14.8332 23.9667 14.7332 23.9667L12.6999 23.9333C12.5999 23.9333 12.5332 23.8333 12.5665 23.7667L13.9332 17.1C13.9332 17.0333 13.9665 17 14.0332 17Z" fill="url(#paint8_radial_388_5912)" />
             <defs>
                 <radialGradient id="paint0_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.1527 19.0542) scale(23.4988)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16.8063 21.0229) rotate(-90) scale(22.3555 10.1616)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint2_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.1019 21.0368) scale(15.6659)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint3_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.46068 21.0445) scale(19.5823)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint4_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.2047 24.6774) scale(2.66124 3.92392)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint5_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.2045 28.3434) scale(2.66123 3.9239)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint6_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.8374 28.3435) scale(2.66124 3.92392)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint7_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.8286 24.6774) scale(2.66124 3.90366)">
-                    <stop stop-color="#26A9E0" />
-                    <stop offset="0.2835" stop-color="#26A9E0" />
-                    <stop offset="1" stop-color="#B3FDFF" />
+                    <stop stopColor="#26A9E0" />
+                    <stop offset="0.2835" stopColor="#26A9E0" />
+                    <stop offset="1" stopColor="#B3FDFF" />
                 </radialGradient>
                 <radialGradient id="paint8_radial_388_5912" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.9063 29.0988) rotate(-90) scale(11.7655 20.3728)">
-                    <stop stop-color="#FFA141" />
-                    <stop offset="0.1746" stop-color="#FFA141" />
-                    <stop offset="0.3575" stop-color="#FFA63B" />
-                    <stop offset="0.6011" stop-color="#FFB62A" />
-                    <stop offset="0.8778" stop-color="#FFD00F" />
-                    <stop offset="1" stop-color="#FFDD00" />
+                    <stop stopColor="#FFA141" />
+                    <stop offset="0.1746" stopColor="#FFA141" />
+                    <stop offset="0.3575" stopColor="#FFA63B" />
+                    <stop offset="0.6011" stopColor="#FFB62A" />
+                    <stop offset="0.8778" stopColor="#FFD00F" />
+                    <stop offset="1" stopColor="#FFDD00" />
                 </radialGradient>
             </defs>
         </svg>
@@ -257,49 +257,49 @@ function CloudSVG() {
             <circle cx="7.66675" cy="22.332" r="5" fill="url(#paint8_radial_388_8334)" />
             <defs>
                 <radialGradient id="paint0_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.761 15.5042) scale(15.8612)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20.8773 16.8314) rotate(-90) scale(15.4974 7.04429)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint2_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(25.8017 16.8421) scale(10.5741)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint3_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.9189 16.8474) scale(13.2177)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint4_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11.8367 19.4802) scale(6.5531 3.8002)">
-                    <stop stop-color="#231F20" />
-                    <stop offset="0.4352" stop-color="#231F20" />
-                    <stop offset="1" stop-color="#231F20" stop-opacity="0.01" />
+                    <stop stopColor="#231F20" />
+                    <stop offset="0.4352" stopColor="#231F20" />
+                    <stop offset="1" stopColor="#231F20" stopOpacity="0.01" />
                 </radialGradient>
                 <radialGradient id="paint5_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.0313 25.8727) scale(17.6241)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint6_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.2715 27.3499) rotate(-90) scale(16.0179 7.28086)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint7_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.7432 27.3592) scale(11.7494)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
                 <radialGradient id="paint8_radial_388_8334" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.7622 27.366) scale(14.6868)">
-                    <stop stop-color="#E6E7E8" />
-                    <stop offset="0.4218" stop-color="#E6E7E8" />
-                    <stop offset="1" stop-color="white" />
+                    <stop stopColor="#E6E7E8" />
+                    <stop offset="0.4218" stopColor="#E6E7E8" />
+                    <stop offset="1" stopColor="white" />
                 </radialGradient>
             </defs>
         </svg>
@@ -343,16 +343,16 @@ function AtmosphereSVG() {
             <circle cx="5.54614" cy="14.0059" r="1.5" fill="#ADADAD" />
             <circle cx="23.5" cy="10" r="1.5" fill="#ADADAD" />
             <circle cx="18.6033" cy="10" r="1.5" fill="#ADADAD" />
-            <path d="M12 6H20" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M6.06909 9.93164H13.9771" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M9.94263 14L15.9426 14" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M14 18L29 18" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M20 14L27 14" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M7 22L14 22" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M18 22L25 22" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M14 26H20" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M20 14L27 14" stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M3 18L6 18" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <path d="M12 6H20" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M6.06909 9.93164H13.9771" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M9.94263 14L15.9426 14" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M14 18L29 18" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M20 14L27 14" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M7 22L14 22" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M18 22L25 22" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M14 26H20" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M20 14L27 14" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <path d="M3 18L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" />
             <defs>
                 <filter id="filter0_f_396_12441" x="1.65512" y="1.65659" width="28.6898" height="28.6888" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
