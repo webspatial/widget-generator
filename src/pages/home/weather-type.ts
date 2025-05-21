@@ -13,6 +13,9 @@ export interface WeatherData {
   wind: {
     speed: number
   }
+  sys: {
+    country: string
+  }
 }
 
 export interface CityWeather {

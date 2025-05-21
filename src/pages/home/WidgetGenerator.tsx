@@ -7,7 +7,7 @@ import Weather from "./Weather";
 import { AppType } from "../../lib/app-manager";
 
 export default function WidgetGenerator(props: { from: AppType }) {
-  const [activeTab, setActiveTab] = useState<AppType>(props.from);
+  const [activeTab, setActiveTab] = useState<AppType>(AppType.Weather);
 
   // Common content card wrapper with fixed dimensions
   const ContentCard = ({ children }: { children: React.ReactNode }) => (
