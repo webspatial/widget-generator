@@ -71,8 +71,15 @@ export default function WeatherCard({
     )
   }
 
+  const backgroundImage = getWeatherBgImage(weatherType)
+
   return (
     <div
+      style={{
+        backgroundImage: backgroundImage,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       onClick={onGotoWeatherApp}
       className="relative text-white flex items-center justify-between bg-[#a0a0a0] rounded-[16px] py-5 px-6 w-[354px] h-[100px] cursor-pointer"
     >
@@ -112,3 +119,20 @@ export default function WeatherCard({
     </div>
   );
 }
+function getWeatherBgImage(weatherType: string) {
+  switch (weatherType) {
+    case "Clear":
+      return "url(/images/weather/sunny.png)";
+    case "Clouds":
+      return "url(/images/weather/cloud.png)";
+    case "Rain":
+      return "url(/images/weather/rain.png)";
+    case "Snow":
+      return "url(/images/weather/snow.png)";
+    case "Thunderstorm":
+      return "url(/images/weather/thunderstorm.png)";
+    default:
+      return "url(/images/weather/sunny.png)";
+  }
+}
+
