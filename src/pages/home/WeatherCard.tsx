@@ -4,6 +4,24 @@ import type { WeatherData } from "./weather-type";
 import { gAppManager, AppType } from "../../lib/app-manager";
 import { WeatherSmallSVG } from "../weather/WeatherSmallSVG";
 
+
+function getWeatherBgImage(weatherType: string) {
+  switch (weatherType) {
+    case "Clear":
+      return "url(/images/weather/sunny.png)";
+    case "Clouds":
+      return "url(/images/weather/cloud.png)";
+    case "Rain":
+      return "url(/images/weather/rain.png)";
+    case "Snow":
+      return "url(/images/weather/snow.png)";
+    case "Thunderstorm":
+      return "url(/images/weather/thunderstorm.png)";
+    default:
+      return "url(/images/weather/sunny.png)";
+  }
+}
+
 function WindSVG() {
   return <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_387_7593)">
@@ -67,7 +85,7 @@ export default function WeatherCard({
 
   if (isLoading) {
     return (
-      <div className=" text-white flex   bg-[#a0a0a0] rounded-[16px]   w-[354px] h-[100px]  " />
+      <div className=" bg-[#a0a0a0] rounded-[16px]   w-[354px] h-[100px]  " />
     )
   }
 
@@ -81,18 +99,17 @@ export default function WeatherCard({
         backgroundPosition: "center",
       }}
       onClick={onGotoWeatherApp}
-      className="relative text-white flex items-center justify-between bg-[#a0a0a0] rounded-[16px] py-5 px-6 w-[354px] h-[100px] cursor-pointer"
+      className="relative text-white   bg-[#a0a0a0] rounded-[16px]  w-[354px] h-[100px] cursor-pointer"
     >
-      <div className="flex flex-col">
+      <div className="absolute left-[20px] top-[10px] flex items-center gap-0">
+        <span className="text-white text-[36px] h-[55px] leading-[55px]">
+          {Math.round(temperature)}°
+        </span>
+        <WeatherSmallSVG weatherType={weatherType} />
+      </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-white text-[36px]">
-            {Math.round(temperature)}°
-          </span>
-          <WeatherSmallSVG weatherType={weatherType} />
-        </div>
-
-        <span className=" text-[13px]">{countryCity}</span>
+      <div className="absolute left-[20px] bottom-[8px] text-[13px] h-[36px] leading-[36px]">
+        {countryCity}
       </div>
 
       <div className="absolute bottom-[14px] right-[20px] flex items-center gap-4 mt-1">
@@ -119,20 +136,3 @@ export default function WeatherCard({
     </div>
   );
 }
-function getWeatherBgImage(weatherType: string) {
-  switch (weatherType) {
-    case "Clear":
-      return "url(/images/weather/sunny.png)";
-    case "Clouds":
-      return "url(/images/weather/cloud.png)";
-    case "Rain":
-      return "url(/images/weather/rain.png)";
-    case "Snow":
-      return "url(/images/weather/snow.png)";
-    case "Thunderstorm":
-      return "url(/images/weather/thunderstorm.png)";
-    default:
-      return "url(/images/weather/sunny.png)";
-  }
-}
-

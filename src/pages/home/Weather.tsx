@@ -1,7 +1,6 @@
 import type React from "react";
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import WeatherCard from "./WeatherCard";
 import type { CityWeather } from "./weather-type";
@@ -121,19 +120,20 @@ export default function Weather() {
     }
   };
 
+
   return (
     <div>
-      <h1 className="text-[36px] font-bold text-white mb-6">Weather</h1>
+      <h1 className="text-[36px] font-bold text-white mb-[10px]">Weather</h1>
 
       {/* Search Form */}
-      <form onSubmit={handleAddCity} className="relative mb-4">
+      <form onSubmit={handleAddCity} className="relative mb-[20px]">
         <div className="relative flex items-center">
-          <div className="relative flex-grow">
+          <div className="relative flex-grow text-[17px]">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#888888] h-5 w-5" />
             <Input
               type="text"
               placeholder="Search City"
-              className="w-full bg-[#b8b8b8] border-none pl-12 pr-4 py-6 h-[60px] rounded-full text-white placeholder:text-[#888888] focus-visible:ring-0"
+              className="w-full bg-[#b8b8b8] border-none pl-12 pr-4 py-6 h-[44px] rounded-full text-white placeholder:text-[#888888] focus-visible:ring-0"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -142,13 +142,6 @@ export default function Weather() {
               disabled={isSearching}
             />
           </div>
-          <Button
-            type="submit"
-            className="ml-2 bg-[#444444] hover:bg-[#555555] text-white rounded-full h-[50px] px-6"
-            disabled={isSearching}
-          >
-            {isSearching ? "Searching..." : "Search"}
-          </Button>
         </div>
         {searchError && (
           <p className="text-red-400 text-sm mt-2 ml-4">{searchError}</p>
@@ -156,7 +149,7 @@ export default function Weather() {
       </form>
 
       {/* City List */}
-      <div className="space-y-4 max-h-[350px] overflow-auto scrollbar-hide pr-2">
+      <div className="space-y-[8px] max-h-[350px] overflow-auto scrollbar-hide pr-2">
         {cities.map((cityData) => (
           <WeatherCard
             key={cityData.city}
