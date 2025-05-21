@@ -26,7 +26,7 @@ export default function WhiteBoard() {
 
   return (
     <div className="flex flex-col h-full">
-      <h1 className="text-[36px] h-[54px] font-bold text-white mb-6">
+      <h1 className="text-[29px] h-[92px] leading-[92px] font-bold text-white mb-6">
         White Board
       </h1>
 

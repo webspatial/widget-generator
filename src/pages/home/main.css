@@ -13,4 +13,9 @@ html.webspatial {
     --xr-background-material: translucent;
     background-color: transparent;
   }
+
+  .thick-material {
+    --xr-background-material: thick;
+    background-color: transparent;
+  }
 }

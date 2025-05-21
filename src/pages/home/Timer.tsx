@@ -45,7 +45,7 @@ export default function Timer() {
 
   return (
     <div className="flex flex-col h-full">
-      <h1 className="text-[36px] font-bold text-white mb-16">Timer</h1>
+      <h1 className="text-[29px] h-[92px] leading-[92px] font-bold text-white mb-16">Timer</h1>
 
       <div className="flex justify-center items-center gap-4 mb-8">
         {/* Hours */}

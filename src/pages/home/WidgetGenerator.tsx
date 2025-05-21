@@ -13,7 +13,7 @@ export default function WidgetGenerator(props: { from: AppType }) {
   const ContentCard = ({ children }: { children: React.ReactNode }) => (
     <div
       enable-xr
-      className="w-[402px] h-[540px] bg-[#c4c4c4] translucent-material rounded-[30px] p-[24px] pt-[28.xpx]"
+      className="w-[402px] h-[540px] bg-[#c4c4c4] translucent-material rounded-[30px] px-[24px]  "
     >
       {children}
     </div>
