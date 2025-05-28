@@ -5,9 +5,11 @@ import Timer from "./Timer";
 import WhiteBoard from "./WhiteBoard";
 import Weather from "./Weather";
 import { AppType } from "../../lib/app-manager";
+import { PopoverContent } from "./popover";
+
 
 export default function WidgetGenerator(props: { from: AppType }) {
-  const [activeTab, setActiveTab] = useState<AppType>(props.from);
+  const [activeTab, setActiveTab] = useState<AppType>(AppType.Weather);
 
   // Common content card wrapper with fixed dimensions
   const ContentCard = ({ children }: { children: React.ReactNode }) => (
@@ -20,12 +22,12 @@ export default function WidgetGenerator(props: { from: AppType }) {
   );
 
   return (
-    <div className="mx-auto  rounded-[30px]  flex flex-col items-center">
+    <div className="mx-auto  rounded-[30px]  flex flex-col items-center ">
       {/* Tabs Navigation */}
       <Tabs
         value={activeTab}
         onValueChange={v => setActiveTab(v as AppType)}
-        className="flex flex-col items-center"
+        className="flex flex-col items-center relative"
       >
         <div className="w-[402px] flex justify-center ">
           <TabsList
@@ -73,7 +75,11 @@ export default function WidgetGenerator(props: { from: AppType }) {
             <Weather />
           </ContentCard>
         </TabsContent>
+
+        <PopoverContent />
       </Tabs>
+
+
     </div>
   );
 }

@@ -40,7 +40,7 @@ const AppDefaultSize: Record<string, WindowContainerOptions> = {
   },
   [AppType.Home]: {
     defaultSize: {
-      width: 402,
+      width: 600,
       height: 610,
     },
     resizability: "contentSize",

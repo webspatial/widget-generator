@@ -3,11 +3,11 @@
   "start_url": "/",
   "xr_main_scene": {
     "default_size": {
-      "width": 402,
+      "width": 600,
       "height": 610
     }
   },
-  "display": "fullscreen",
+  "display": "standalone",
   "icons": [
     {
       "src": "/icons/icon-192.png",

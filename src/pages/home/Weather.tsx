@@ -149,7 +149,7 @@ export default function Weather() {
       </form>
 
       {/* City List */}
-      <div className="space-y-[8px] max-h-[350px] overflow-auto scrollbar-hide pr-2">
+      <div className="space-y-[8px] max-h-[350px] overflow-auto scrollbar-hide">
         {cities.map((cityData) => (
           <WeatherCard
             key={cityData.city}
