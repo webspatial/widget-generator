@@ -3,7 +3,7 @@
 import type { WeatherData } from "./weather-type";
 import { gAppManager, AppType } from "../../lib/app-manager";
 import { WeatherSmallSVG } from "../weather/WeatherSmallSVG";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { DialogContext } from "./Dialog";
 
 function getWeatherBgImage(weatherType: string) {
@@ -74,6 +74,8 @@ export default function WeatherCard({
 
   const { state, dispatch } = useContext(DialogContext)
 
+  const ref2deleteIcon = useRef<HTMLDivElement>(null)
+
 
   const onGotoWeatherApp = () => {
     gAppManager.createApp(AppType.Weather, { city });
@@ -96,12 +98,15 @@ export default function WeatherCard({
   const backgroundImage = getWeatherBgImage(weatherType)
 
   const onRemoveClicked = (evt: React.MouseEvent<HTMLDivElement>) => {
+    const rect = ref2deleteIcon.current?.getBoundingClientRect()
+
     dispatch({
-      open: true, callback: () => {
+      open: true,
+      callback: () => {
         onRemove(city)
-      }
+      },
+      domRect: rect,
     })
-    // evt.preventDefault()
     evt.stopPropagation()
   }
 
@@ -142,6 +147,7 @@ export default function WeatherCard({
       </div>
 
       <div
+        ref={ref2deleteIcon}
         onClick={onRemoveClicked}
         className="absolute cursor-pointer top-[18px] right-[8px] w-[44px] h-[44px] text-white hover:bg-[#888888]/30 rounded-full"
       >

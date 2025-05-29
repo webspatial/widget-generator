@@ -8,15 +8,14 @@ import { DialogContext } from './Dialog'
 export function PopoverContent() {
   const { state, dispatch } = useContext(DialogContext)
 
-
   if (!state.open) {
     return null
   }
 
   const style: CSSProperties = {
-    top: 0,
-    left: 0,
-    '--xr-back': 16
+    // 120 is adjusted value according to the UI design  
+    top: (state.domRect?.top || 0) + 120,
+    left: state.domRect?.left,
   }
 
   const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -24,6 +23,9 @@ export function PopoverContent() {
   }
 
   return <div
+    style={{
+      '--xr-back': 16
+    }}
     enable-xr
     className='absolute top-0 left-0 w-full h-full'
     onClick={e => {
@@ -31,6 +33,6 @@ export function PopoverContent() {
       dispatch({ open: false })
     }}
   >
-    <div enable-xr onClick={onClick} style={style} className="absolute translucent-material pl-[32px] bg-gray-300 w-[130px] h-[70px] rounded-full text-[17px] leading-[70px] flex  "> Delete </div>
+    <div enable-xr onClick={onClick} style={style} className="absolute text-white translucent-material pl-[32px]  w-[230px] h-[70px] rounded-full text-[17px] leading-[70px] flex  "> Delete </div>
   </div>
 }

@@ -3,6 +3,7 @@ import { Dispatch, createContext, ReactNode, useMemo, useState } from 'react'
 type DialogState = {
   open: boolean
   callback?: () => void,
+  domRect?: DOMRect
 }
 
 type DialogAction = DialogState
