@@ -9,7 +9,7 @@ import { PopoverContent } from "./popover";
 
 
 export default function WidgetGenerator(props: { from: AppType }) {
-  const [activeTab, setActiveTab] = useState<AppType>(AppType.Weather);
+  const [activeTab, setActiveTab] = useState<AppType>(props.from);
 
   // Common content card wrapper with fixed dimensions
   const ContentCard = ({ children }: { children: React.ReactNode }) => (
