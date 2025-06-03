@@ -7,7 +7,7 @@ export default function ColorSelect(props: ColorSelectProps) {
     const [colors, setColors] = useState<ColorProps[]>([])
     const [lineWidths, setLineWidths] = useState<LineWidthProps[]>([])
 
-    const onSelectColor = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onSelectColor = (e: any) => {
         e.preventDefault()
         e.stopPropagation()
         const selIndex = Number(e.target.id.split('-')[1])
@@ -22,7 +22,7 @@ export default function ColorSelect(props: ColorSelectProps) {
         setColors(newColors)
     }
 
-    const onSelectLineWidth = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onSelectLineWidth = (e: any) => {
         e.preventDefault()
         e.stopPropagation()
         const selIndex = Number(e.target.id.split('-')[1])

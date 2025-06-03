@@ -18,6 +18,7 @@ export function PopoverContent() {
     left: state.domRect?.left,
   }
 
+  // @ts-ignore
   const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
     state.callback?.()
   }

@@ -360,6 +360,7 @@ function XIcon({ className }: { className?: string }) {
 
 // Custom volume icon component
 function VolumeIcon({
+  // @ts-ignore
   className,
   muted,
 }: {

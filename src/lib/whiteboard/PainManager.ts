@@ -11,7 +11,7 @@ class PainManager {
     private backgroundColor: string = '0xffffff';
     private drawType: string = 'draw'; // draw, erase
     public onDraw: () => void = () => {};
-    private cursor: Graphics = undefined;
+    private cursor?: Graphics;
     
     async init(background:string, parent: HTMLElement) {
         this.app = new Application()
@@ -38,7 +38,7 @@ class PainManager {
         this.app.stage.on('pointerupoutside', this.endDrawing.bind(this));
     }
     
-    private startDrawing(event) {
+    private startDrawing(event:any) {
         if(!this.isActive) return;
         this.isDrawing = true;
         this.bufferCommand = [];
@@ -73,7 +73,7 @@ class PainManager {
         this.app?.stage.addChild(this.cursor);
     }
     
-    private draw(event) {
+    private draw(event:any) {
         if (!this.isDrawing || !this.isActive) return;
         const graphics = this.historyCommand[this.historyCommand.length-1].data[0] as Graphics;
         graphics.lineTo(event.globalX, event.globalY);
@@ -86,6 +86,7 @@ class PainManager {
         this.onDraw();
         if(this.cursor){
             this.app?.stage.removeChild(this.cursor);
+            // @ts-ignore
             this.cursor = undefined;
         }
     }

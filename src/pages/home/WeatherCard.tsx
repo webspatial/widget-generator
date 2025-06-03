@@ -3,7 +3,7 @@
 import type { WeatherData } from "./weather-type";
 import { gAppManager, AppType } from "../../lib/app-manager";
 import { WeatherSmallSVG } from "../weather/WeatherSmallSVG";
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { DialogContext } from "./Dialog";
 
 function getWeatherBgImage(weatherType: string) {
@@ -68,11 +68,12 @@ interface WeatherCardProps {
 export default function WeatherCard({
   weather,
   isLoading,
+  // @ts-ignore
   error,
   onRemove,
 }: WeatherCardProps) {
 
-  const { state, dispatch } = useContext(DialogContext)
+  const { dispatch } = useContext(DialogContext)
 
   const ref2deleteIcon = useRef<HTMLDivElement>(null)
 
