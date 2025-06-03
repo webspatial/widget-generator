@@ -7,7 +7,7 @@
       "height": 610
     }
   },
-  "display": "standalone",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "/icons/icon-192.png",

@@ -33,6 +33,6 @@ export function PopoverContent() {
       dispatch({ open: false })
     }}
   >
-    <div enable-xr onClick={onClick} style={style} className="absolute text-white translucent-material pl-[32px]  w-[230px] h-[70px] rounded-full text-[17px] leading-[70px] flex  "> Delete </div>
+    <div enable-xr onClick={onClick} style={style} className="absolute text-white thick-material pl-[32px]  w-[230px] h-[70px] rounded-full text-[17px] leading-[70px] flex  "> Delete </div>
   </div>
 }
