@@ -330,7 +330,7 @@ export default function TimerApp({ initialSeconds = 60 }: TimerAppProps) {
 
       {/* Audio element */}
       <audio ref={audioRef} loop preload="auto" >
-        <source src="./alarm.mp3" type="audio/mp3" />
+        <source src="../../../assets/alarm.mp3" type="audio/mp3" />
       </audio>
     </div>
   );

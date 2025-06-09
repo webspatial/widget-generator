@@ -1,6 +1,6 @@
 {
   "name": "Widget Generator",
-  "start_url": "/",
+  "start_url": "/index.html",
   "xr_main_scene": {
     "default_size": {
       "width": 600,
