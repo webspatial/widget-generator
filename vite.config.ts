@@ -14,7 +14,10 @@ export default defineConfig({
   },
 
   build: {
+    sourcemap: true,
+    minify: false,
     rollupOptions: {
+     
       input: {
         main: path.resolve(__dirname, "index.html"),
         clock: path.resolve(__dirname, "src/pages/clock/index.html"),
