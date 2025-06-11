@@ -20,3 +20,12 @@ You can use Safari's Web Inspector to debug.
 ```
 npm run build-sim
 ```
+
+The built app will be installed on your simulator.
+The instalable app can be found in following path:
+
+```
+node_modules/.webspatial-builder-temp/platform-visionos/test/Build/Products/Debug-xrsimulator
+```
+
+You can share and install this app with your friends to run on their AVP simulator.
