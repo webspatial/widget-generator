@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "devAVP": "XR_ENV=avp vite",
-    "sim": "npx webspatial-builder run --bundle-id=com.webspatial.widgetgenerator",
+    "sim": "npx webspatial-builder run --base=http://localhost:5173/  --bundle-id=com.webspatial.widgetgenerator",
     "build-sim": "npm run build && npm run sim-packaged",
     "build": "XR_ENV=avp tsc -b && XR_ENV=avp vite build",
     "sim-packaged": "npx webspatial-builder run  --bundle-id=com.webspatial.widgetgenerator",
