@@ -21,20 +21,20 @@ importers:
         specifier: ^4.1.7
         version: 4.1.7(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0))
       '@webspatial/builder':
-        specifier: ^0.1.17
-        version: 0.1.17
+        specifier: latest
+        version: 0.1.21
       '@webspatial/core-sdk':
-        specifier: ^0.1.17
-        version: 0.1.17
+        specifier: latest
+        version: 0.1.21
       '@webspatial/platform-visionos':
-        specifier: ^0.1.17
-        version: 0.1.17
+        specifier: latest
+        version: 0.1.21
       '@webspatial/react-sdk':
-        specifier: ^0.1.17
-        version: 0.1.17(@webspatial/core-sdk@0.1.17)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: latest
+        version: 0.1.21(@webspatial/core-sdk@0.1.21)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@webspatial/vite-plugin':
-        specifier: ^0.1.7
-        version: 0.1.7(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0))
+        specifier: latest
+        version: 0.1.8(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0))
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1266,22 +1266,22 @@ packages:
   '@webgpu/types@0.1.60':
     resolution: {integrity: sha512-8B/tdfRFKdrnejqmvq95ogp8tf52oZ51p3f4QD5m5Paey/qlX4Rhhy5Y8tgFMi7Ms70HzcMMw3EQjH/jdhTwlA==}
 
-  '@webspatial/builder@0.1.17':
-    resolution: {integrity: sha512-qilIVfvynzzpLnhkxgNnhhFjV4D9lVczmw1KYY/rHU0gZ9BJMtpi5RR16wyE+0+c7vPhs1FQmTtwlw13amErjg==}
+  '@webspatial/builder@0.1.21':
+    resolution: {integrity: sha512-vUwwq2gbwwlwAhZ/KiNB4+4/VsaJ2wgfOV6lXNiDTM+LlVb3YR1zD7Sp7LKS8Z1CUTFmsoMzepRhM+04s+AJOQ==}
     engines: {node: '>=14.15.0'}
     hasBin: true
 
-  '@webspatial/core-sdk@0.1.17':
-    resolution: {integrity: sha512-6YE7ig77O5egpiFpaOLSWlhIyOmdfG3q02ZqsMaOTZXgYPlEWgAMiiCOtLvFDG8X0dd/OPdNy2OxlkimJNMa7g==}
+  '@webspatial/core-sdk@0.1.21':
+    resolution: {integrity: sha512-xz77MJVzqFGWBArH9LhBXOuTI/mxUB7ZIyVWORDdd/zQQF8Psj9upxnVP0F3dyXDhrsukQkTavZP/euhFIt+/A==}
 
-  '@webspatial/platform-visionos@0.1.17':
-    resolution: {integrity: sha512-qD3bzmD7GAnfCELTZeqVWlsSpTOvwDcYaE3TaELe+c/r5aBQYKT2DyB+mvF4thkTG/WBgXBiMETRbTrJvQ2MTw==}
+  '@webspatial/platform-visionos@0.1.21':
+    resolution: {integrity: sha512-GdaOW+uVPiRO0hPmYPqbt0/WFOFJy0IxywSOoqanAPIOzKaougOEhjlGATTLYlPIDVB0WIamI1np9D/m5+5iVw==}
     engines: {node: '>=14.15.0'}
 
-  '@webspatial/react-sdk@0.1.17':
-    resolution: {integrity: sha512-ipR78kV8i0sQO8+HYMc9XwsmNRkjTo2hYyWVw4vvzKqhOFXad+YOi6eOYj5BiKQ8NJFEOl2gsOt+JSW8PhJ5sg==}
+  '@webspatial/react-sdk@0.1.21':
+    resolution: {integrity: sha512-7Fn1QQ+hRDVpgYVRGsh831ibXoRNdT4GGxxi+CW9IGQ8ie9k2lRNVUuRR4C4Ro6w6+FmHcB7I/9HPQyKa8ZNLA==}
     peerDependencies:
-      '@webspatial/core-sdk': 0.1.17
+      '@webspatial/core-sdk': 0.1.21
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
     peerDependenciesMeta:
@@ -1290,11 +1290,11 @@ packages:
       react-dom:
         optional: true
 
-  '@webspatial/shared@0.1.4':
-    resolution: {integrity: sha512-bkTKNY2DOFaQlkBzFd8OY6ktw3Lh2qSlbCoLg6tXzFfwavosqdyygncqOogNfbuKyKRintTu/LFmPuP5W+IBCA==}
+  '@webspatial/shared@0.1.5':
+    resolution: {integrity: sha512-epuEwY1/ByFOysjAUw66hd5ICKfuhVO3ma+NtWg/5pa3mFl1T0cQWVk/GyNkKnMa8ROjReR62EKaR1fFITIJ+A==}
 
-  '@webspatial/vite-plugin@0.1.7':
-    resolution: {integrity: sha512-nbtXQxROFBVQxBSVfVgyS/2gP7q+fXQaNilJSTz0v5H3ETXVLkpdlT1zwQeuYtQv27lcBk0+To2SJx3JjKbzZQ==}
+  '@webspatial/vite-plugin@0.1.8':
+    resolution: {integrity: sha512-aQvH5T1KjFtcn0VRfsCpkKk1n9NWBR8TVecUKv+j2HvozI0E6/Y6UScpIbJAwltrU8xtNvW/TWx+eep1ZxP9Yg==}
     peerDependencies:
       vite: ^6.0.0
 
@@ -2087,10 +2087,6 @@ packages:
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
     engines: {node: '>=10'}
-
-  loglevel@1.9.2:
-    resolution: {integrity: sha512-HgMmCqIJSAKqo68l0rS2AanEWfkxaZ5wNiEFb5ggm08lDs9Xl2KxBlX3PTcaD2chBM1gXAYf491/M2Rv8Jwayg==}
-    engines: {node: '>= 0.6.0'}
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -3901,10 +3897,10 @@ snapshots:
 
   '@webgpu/types@0.1.60': {}
 
-  '@webspatial/builder@0.1.17':
+  '@webspatial/builder@0.1.21':
     dependencies:
       '@resvg/resvg-js': 2.6.2
-      '@webspatial/platform-visionos': 0.1.17
+      '@webspatial/platform-visionos': 0.1.21
       cli-progress: 3.12.0
       colors: 1.4.0
       commander: 13.1.0
@@ -3922,29 +3918,26 @@ snapshots:
       - debug
       - encoding
 
-  '@webspatial/core-sdk@0.1.17':
-    dependencies:
-      loglevel: 1.9.2
+  '@webspatial/core-sdk@0.1.21': {}
 
-  '@webspatial/platform-visionos@0.1.17': {}
+  '@webspatial/platform-visionos@0.1.21': {}
 
-  '@webspatial/react-sdk@0.1.17(@webspatial/core-sdk@0.1.17)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@webspatial/react-sdk@0.1.21(@webspatial/core-sdk@0.1.21)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@google/model-viewer': 4.1.0(three@0.170.0)
       '@types/three': 0.170.0
-      '@webspatial/core-sdk': 0.1.17
+      '@webspatial/core-sdk': 0.1.21
       lodash.isequal: 4.5.0
-      loglevel: 1.9.2
       three: 0.170.0
     optionalDependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@webspatial/shared@0.1.4': {}
+  '@webspatial/shared@0.1.5': {}
 
-  '@webspatial/vite-plugin@0.1.7(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0))':
+  '@webspatial/vite-plugin@0.1.8(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0))':
     dependencies:
-      '@webspatial/shared': 0.1.4
+      '@webspatial/shared': 0.1.5
       vite: 6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)
 
   '@xmldom/xmldom@0.8.10': {}
@@ -4756,8 +4749,6 @@ snapshots:
     dependencies:
       chalk: 4.1.2
       is-unicode-supported: 0.1.0
-
-  loglevel@1.9.2: {}
 
   lru-cache@5.1.1:
     dependencies:
