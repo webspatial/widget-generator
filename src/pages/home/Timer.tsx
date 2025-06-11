@@ -117,7 +117,7 @@ export default function Timer() {
       <div className="w-full flex justify-center mb-8">
         <Button
           onClick={handleStart}
-          className="bg-white text-black hover:bg-white/90 rounded-full w-[200px] h-[60px] text-xl font-medium"
+          className="bg-white/90 text-black rounded-full w-[200px] h-[60px] text-xl font-medium"
         >
           Start
         </Button>
