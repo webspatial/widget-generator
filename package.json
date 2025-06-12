@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "devAVP": "XR_ENV=avp vite",
-    "sim": "npx webspatial-builder run --base=http://localhost:5173/  --bundle-id=com.webspatial.widgetgenerator",
-    "build-sim": "npm run build && npm run sim-packaged",
+    "sim:dev": "npx webspatial-builder run --base=http://localhost:5173/ ",
     "build": "XR_ENV=avp tsc -b && XR_ENV=avp vite build",
-    "sim-packaged": "npx webspatial-builder run  --bundle-id=com.webspatial.widgetgenerator",
+    "sim:distpkg": "npx webspatial-builder run",
+    "build:sim:distpkg": "npm run build && npm run sim:distpkg",
+    "ipa:distpkg": "dotenv -e .env.local -- sh -c 'webspatial-builder build --base=/ --teamId=$APPLE_TEAM_ID --bundle-id=$BUNDLE_ID'",
+    "build:ipa:distpkg": "npm run build && npm run ipa:distpkg",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -44,6 +46,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.1.0",
+    "dotenv-cli": "^8.0.0",
     "tw-animate-css": "^1.2.9",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.32.1",
