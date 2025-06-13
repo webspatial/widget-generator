@@ -8,7 +8,7 @@ class PainManager {
     private isActive = true;
     private lineWidth: number = 1;
     private lineColor: string = '0xffffff';
-    private backgroundColor: string = '0xffffff';
+    public backgroundColor: string = '0xffffff';
     private drawType: string = 'draw'; // draw, erase
     public onDraw: () => void = () => {};
     private cursor?: Graphics;

@@ -52,8 +52,8 @@ export default function EditTool(props:{showTool:(show:boolean) => void}) {
     }
 
     useEffect(() => {
-        props.showTool(canEdit)
-    }, [canEdit])
+        props.showTool(canEdit && canDraw)
+    }, [canEdit, canDraw])
 
     useEffect(() => {
         painManager.onDraw = () => {
@@ -62,7 +62,7 @@ export default function EditTool(props:{showTool:(show:boolean) => void}) {
         }
     }, [])
 
-    return<div enable-xr className='edit-tool-container'>
+    return<div enable-xr className='edit-tool-container' style={{width: `${canEdit ? '358px' : '141px'}`, left: `calc(50% - ${canEdit ? 179 : 70}px)`}}>
             <div className="edit-tool-bar" style={{width: `${canEdit ? '358px' : '141px'}`}}>
             {
                 canEdit? <><div className='edit-btn-container' onClick={onRemoveAll}>
