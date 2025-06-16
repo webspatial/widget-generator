@@ -32,23 +32,23 @@ export default function WidgetGenerator(props: { from: AppType }) {
         <div className="w-[402px] flex justify-center ">
           <TabsList
             enable-xr
-            className="translucent-material w-[366px] h-[60px] bg-[#c4c4c4] p-1 rounded-full text-[19px]]"
+            className="translucent-material w-[386px] h-[60px] bg-[#c4c4c4] px-[10px] rounded-full "
           >
             <TabsTrigger
               value="clock"
-              className="rounded-full h-[48px] px-6 text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
+              className="rounded-full h-[40px] leading-[40px] text-[19px] text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
             >
               Timer
             </TabsTrigger>
             <TabsTrigger
               value="whiteboard"
-              className="rounded-full h-[48px] px-6 text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
+              className="rounded-full h-[40px] leading-[40px]  text-[19px] text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
             >
               White Board
             </TabsTrigger>
             <TabsTrigger
               value="weather"
-              className="rounded-full h-[48px] px-6 text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
+              className="rounded-full h-[40px] leading-[40px] text-[19px] text-white data-[state=active]:bg-[#d9d9d94e] data-[state=active]:text-white"
             >
               Weather
             </TabsTrigger>
