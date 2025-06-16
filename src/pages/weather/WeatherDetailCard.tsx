@@ -11,7 +11,7 @@ export default function WeatherDetailCard({ currentData }: { currentData: DayFor
                     <p className="text-[17px]">
                         {currentData.name}
                     </p>
-                    <p className="text-[70px] font-light leading-none mt-[4px]">
+                    <p className="text-[70px] font-bold leading-none mt-[4px]">
                         {currentData.current}
                     </p>
                 </div>
@@ -26,10 +26,10 @@ export default function WeatherDetailCard({ currentData }: { currentData: DayFor
                 </p>
 
                 <div className="flex w-[271px] h-[80px] justify-between   items-center">
-                    <p className="text-[54px] font-light leading-none">
+                    <p className="text-[54px] font-bold leading-none">
                         {Math.round(currentData.temp_max)}°
                     </p>
-                    <p className="ml-4 text-[54px] font-light leading-none text-gray-400">
+                    <p className="ml-4 text-[54px] font-bold leading-none text-white/40">
                         {Math.round(currentData.temp_min)}°
                     </p>
                     <WeatherMiddleSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
