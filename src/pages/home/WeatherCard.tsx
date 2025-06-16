@@ -122,13 +122,13 @@ export default function WeatherCard({
       className="relative text-white   bg-[#a0a0a0] rounded-[16px]  w-[354px] h-[100px] "
     >
       <div className="absolute left-[20px] top-[10px] flex items-center gap-0">
-        <span className="text-white text-[36px] h-[55px] leading-[55px]">
+        <span className="text-white text-[36px] font-bold h-[55px] leading-[55px]">
           {Math.round(temperature)}°
         </span>
         <WeatherSmallSVG weatherType={weatherType} />
       </div>
 
-      <div className="absolute left-[20px] bottom-[8px] text-[13px] h-[36px] leading-[36px]">
+      <div className="absolute left-[20px] bottom-[8px] text-[13px] font-bold h-[36px] leading-[36px]">
         {countryCity}
       </div>
 
@@ -150,7 +150,7 @@ export default function WeatherCard({
       <div
         ref={ref2deleteIcon}
         onClick={onRemoveClicked}
-        className="absolute cursor-pointer top-[18px] right-[8px] w-[44px] h-[44px] text-white hover:bg-[#888888]/30 rounded-full"
+        className="absolute cursor-pointer top-[6px] right-[6px] w-[44px] h-[44px] text-white hover:bg-[#888888]/30 rounded-full"
       >
         <DeleteSVG />
       </div>
