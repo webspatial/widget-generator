@@ -129,11 +129,11 @@ export default function Weather() {
       <form enable-xr style={{ "--xr-back": 0 }} onSubmit={handleAddCity} className="  thick-material rounded-full relative mb-[20px] mt-[10px]">
         <div className=" relative flex items-center ">
           <div className="relative flex-grow text-[17px]" >
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#888888] h-5 w-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 h-5 w-5" />
             <Input
               type="text"
               placeholder="Search City"
-              className="w-full border-none pl-12 pr-4 py-6 h-[44px]  text-white placeholder:text-[#888888] focus-visible:ring-0"
+              className="w-full border-none pl-12 pr-4 py-6 h-[44px]  text-white/50 placeholder:text-white/50 focus-visible:ring-0"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
