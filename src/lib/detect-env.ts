@@ -1,7 +1,5 @@
-import { SpatialHelper } from "@webspatial/core-sdk";
-
 export function runInSpatialWeb() {
-  if (SpatialHelper.instance) {
+  if (navigator.userAgent.indexOf("WebSpatial/") > 0) {
     return true;
   }
   return false;

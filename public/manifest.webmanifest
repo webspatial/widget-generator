@@ -5,7 +5,13 @@
     "default_size": {
       "width": 600,
       "height": 610
-    }
+    },
+    "resizability": {
+      "minWidth": 600,
+      "minHeight": 610,
+      "maxWidth": 600,
+      "maxHeight": 610
+     }
   },
   "display": "fullscreen",
   "icons": [

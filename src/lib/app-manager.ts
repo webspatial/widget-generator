@@ -1,6 +1,5 @@
 import { onCloseAppMessage } from "@/lib/channel-message";
-import {initScene} from "@webspatial/react-sdk"
-import {WindowContainerOptions} from "@webspatial/core-sdk"
+import {initScene, WindowContainerOptions} from "@webspatial/react-sdk"
 
 export enum AppType {
   Clock = "clock",
@@ -22,28 +21,48 @@ const AppDefaultSize: Record<string, WindowContainerOptions> = {
       width: 402,
       height: 456,
     },
-     resizability: "contentSize",
+     resizability: {
+      minWidth: 402,
+      minHeight: 456,
+      maxWidth: 402,
+      maxHeight: 456,
+     }
   },
   [AppType.Weather]: {
     defaultSize: {
       width: 456,
       height: 438,
     },
-    resizability: "contentSize",
+    resizability: {
+      minWidth: 456,
+      minHeight: 438,
+      maxWidth: 456,
+      maxHeight: 438,
+     }
   },
   [AppType.Whiteboard]: {
     defaultSize: {
       width: 700,
       height: 736,
     },
-    resizability: "contentSize",
+    resizability: {
+      minWidth: 700,
+      minHeight: 736,
+      maxWidth: 700,
+      maxHeight: 736,
+     }
   },
   [AppType.Home]: {
     defaultSize: {
       width: 600,
       height: 610,
     },
-    resizability: "contentSize",
+    resizability: {
+      minWidth: 600,
+      minHeight: 610,
+      maxWidth: 600,
+      maxHeight: 610,
+     }
   },
 };
 
