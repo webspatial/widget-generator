@@ -8,10 +8,12 @@ import type { CityWeather } from "./weather-type";
 const API_KEY = "f98e4bba1f6eb2af7dde364a5ebc367f";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
-const citiesFromLocalStorage = localStorage.getItem('cities') ?? "New York,Los Angeles,Tokyo";
-const defaultCities = citiesFromLocalStorage.split(",").map((city) => city.trim()).map((city) => ({ city, isLoading: true }));
 
 export default function Weather() {
+  const citiesFromLocalStorage = localStorage.getItem('cities') ?? "New York,Los Angeles,Tokyo";
+  const defaultCities = citiesFromLocalStorage.split(",").map((city) => city.trim()).map((city) => ({ city, isLoading: true }));
+
+
   const [cities, setCities] = useState<CityWeather[]>(defaultCities);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearching, setIsSearching] = useState(false);
