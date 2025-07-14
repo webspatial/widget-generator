@@ -15,7 +15,9 @@ export default function WeatherDetailCard({ currentData }: { currentData: DayFor
                         {currentData.current}
                     </p>
                 </div>
-                <WeatherBigSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
+                <div enable-xr={true} style={{ '--xr-back': 16 }}>
+                    <WeatherBigSVG  weatherType={getWeatherType(currentData.weatherId)} />
+                </div>
             </div>
         );
     } else {
@@ -32,7 +34,9 @@ export default function WeatherDetailCard({ currentData }: { currentData: DayFor
                     <p className="ml-4 text-[54px] font-bold leading-none text-white/40">
                         {Math.round(currentData.temp_min)}°
                     </p>
-                    <WeatherMiddleSVG enable-xr={true} style={{ '--xr-back': 16 }} weatherType={getWeatherType(currentData.weatherId)} />
+                    <div enable-xr={true} style={{ '--xr-back': 16 }}>
+                        <WeatherMiddleSVG  weatherType={getWeatherType(currentData.weatherId)} />
+                    </div>
                 </div>
             </div>
         );
