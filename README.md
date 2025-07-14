@@ -71,3 +71,38 @@ Step2: If you failed to build, you can try to build with XCode manually.
 open XCode project located at `node_modules/.webspatial-builder-temp/platform-visionos/project/web-spatial.xcodeproj`
 
 Step3: install the ipa file to your device.
+
+
+## How to debug with local WebSpatial SDK source code
+Step1: clone webspatial-sdk source code from github
+
+```bash
+git clone https://github.com/webspatial/webspatial-sdk.git
+```
+Step2: make your project as a workspace, and install dependencies to local webspatial-sdk source code
+
+```bash
+touch pnpm-workspace.yaml
+```
+content of pnpm-workspace.yaml
+```yaml
+- '../webspatial-sdk/packages/*'
+```
+
+Step3: change your dependency to local webspatial-sdk source code in package.json
+
+```json
+{
+  "@webspatial/react-sdk": "workspace:*",
+  "@webspatial/core-sdk": "workspace:*",
+}
+```
+
+Step4: switch to local webspatial-sdk source code, and run watchNPM
+
+```bash
+cd webspatial-sdk
+pnpm install
+pnpm watchNPM
+```
+
