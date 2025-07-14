@@ -54,7 +54,7 @@ export default function App() {
             </div>
         </div>
         <div ref={canvasEl} className="board-container">
-            {<ColorSelect show={showTool} colors={colors} widths={widths} />}
+            {showTool && <ColorSelect show={showTool} colors={colors} widths={widths} background={WhiteboardConfig[WhiteboardConfig.mode].background} />}
         </div>
         <EditTool showTool={onShowTool} />
   </div>

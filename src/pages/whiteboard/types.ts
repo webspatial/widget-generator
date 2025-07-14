@@ -14,4 +14,5 @@ export type ColorSelectProps = {
     show: boolean
     colors: ColorProps[]
     widths: LineWidthProps[]
+    background: string
 }

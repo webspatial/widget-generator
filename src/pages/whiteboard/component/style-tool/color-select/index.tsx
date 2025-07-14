@@ -66,7 +66,7 @@ export default function ColorSelect(props: ColorSelectProps) {
                 colors.map((color, index) => {
                     return <div id={`color-${index}`} className='color-item' key={index} onClick={onSelectColor}>
                         <div className="color-item-bg" style={{ backgroundColor: color.color }}>
-                            {color.isSelected && <IconOK color={painManager.backgroundColor} className='color-selected' />}
+                            {color.isSelected && <IconOK color={props.background} className='color-selected' />}
                         </div>
                     </div>
                 })
@@ -89,7 +89,7 @@ export default function ColorSelect(props: ColorSelectProps) {
 function IconOK({ className, color }: { className?: string, color?: string }) {
     return (
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-            <path d="M5 10L8.5 13L14.5 7" stroke={color} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5 10L8.5 13L14.5 7" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     )
 }
