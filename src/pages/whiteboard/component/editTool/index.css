@@ -1,0 +1,100 @@
+.edit-tool-container{
+    position: absolute;
+    height:68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    background-color: transparent;
+    --xr-background-material: translucent;
+    --xr-back:36;
+    border-radius: 100px;
+}
+
+.edit-tool-bar{
+    height:68px;
+    padding:12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top:10px;
+    gap:6px;
+    border-radius: 100px;
+    transition: width 0.2s ease-in-out;
+}
+
+.edit-btn-container{
+    cursor: pointer;
+    user-select: none; /* 标准语法 */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    width:44px;
+    height:44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn-container:hover{
+    background-color: #FFFFFF1A;
+}
+
+.edit-disable{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.edit-btn-selected{
+    background-color: #FFFFFF1A;
+}
+
+.edit-btn-img{
+    pointer-events: none;
+    width:24px;
+    height:24px;
+}
+
+.edit-tool-divider{
+    width:2px;
+    height:24px;
+    background-color: #FFFFFF14;
+}
+
+.edit-start-container{
+    cursor: pointer;
+    width:117px;
+    height:52px;
+    border-radius: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:6px;
+    color:white;
+}
+
+.edit-start-container:hover{
+    background-color: #FFFFFF1A;
+}
+
+.edit-start-img{
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width:24px;
+}
+
+.edit-start-txt{
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 19px;
+}

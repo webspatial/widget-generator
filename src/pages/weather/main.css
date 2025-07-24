@@ -1,0 +1,55 @@
+#root {
+  background-color: rgba(128, 128, 128, 0.3);
+
+  width: 456px;
+  height: 438px;
+}
+
+html.webspatial {
+  background-color: transparent;
+  --xr-background-material: translucent;
+  border-radius: 40px;
+
+  body {
+    background-color: transparent;
+  }
+
+  #root {
+    background-color: rgba(128, 128, 128, 0);
+
+    > div {
+      background-color: rgba(128, 128, 128, 0);
+
+      > div {
+        background-color: rgba(128, 128, 128, 0);
+      }
+    }
+  }
+
+  .translucent-material {
+    --xr-background-material: translucent;
+    background-color: transparent;
+  }
+}
+
+.weather-Clear { 
+  background: linear-gradient(180deg, #5AA1FE 0%, #64C7FF 100%);
+}
+.weather-Rain { 
+  background: linear-gradient(180deg, #8493A6 0%, #D0DCF6 100%);
+}
+.weather-Thunderstorm { 
+  background: linear-gradient(180deg, #3A4598 0%, #A4A8FC 100%);
+}
+.weather-Cloud { 
+  background: linear-gradient(180deg, #9AC2DE 0%, #DDE5EE 100%);
+}
+.weather-Snow { 
+  background: linear-gradient(180deg, #99BED8 0%, #E7F3FE 100%);
+}
+.weather-Drizzle { 
+  background: linear-gradient(180deg, #9AC2DE 0%, #DDE5EE 100%);
+}
+.weather-Atmosphere { 
+  background: linear-gradient(180deg, #ABACAC 0%, #DAE3E8 100%);
+}

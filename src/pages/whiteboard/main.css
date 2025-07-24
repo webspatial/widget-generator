@@ -1,0 +1,13 @@
+html.webspatial {
+  --xr-background-material: translucent;
+  border-radius: 30px;
+
+  body {
+    background-color: transparent;
+  }
+
+  .translucent-material {
+    --xr-background-material: translucent;
+    background-color: transparent;
+  }
+}
