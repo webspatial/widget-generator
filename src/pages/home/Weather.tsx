@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import WeatherCard from "./WeatherCard";
 import type { CityWeather } from "./weather-type";
 
+// @ts-ignore
 const API_KEY = OPEN_WEATHER_API_KEY
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 

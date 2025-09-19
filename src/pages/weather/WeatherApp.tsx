@@ -56,6 +56,7 @@ export default function WeatherWidget({
       setLoading(true);
       setError(null);
 
+      // @ts-ignore
       const API_KEY = OPEN_WEATHER_API_KEY
       // Fetch current weather
       const currentRes = await fetch(
